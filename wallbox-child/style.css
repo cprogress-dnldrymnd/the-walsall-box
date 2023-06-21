@@ -146,6 +146,13 @@ h6 {
   margin-right: 2rem; }
 
 .woocommerce-product-gallery__wrapper {
-  display: flex; }
+  display: flex;
+  flex-direction: row-reverse; }
+  .woocommerce-product-gallery__wrapper .qodef-woo-thumbnails-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px; }
+    .woocommerce-product-gallery__wrapper .qodef-woo-thumbnails-wrapper .woocommerce-product-gallery__image:not(:last-child) {
+      margin-bottom: 40px; }
 
 /*# sourceMappingURL=style.css.map */

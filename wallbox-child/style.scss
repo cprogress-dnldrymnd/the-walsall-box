@@ -209,4 +209,16 @@ h6 {
 
 .woocommerce-product-gallery__wrapper {
     display: flex;
+    flex-direction: row-reverse;
+
+    .qodef-woo-thumbnails-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-right: 40px;
+        .woocommerce-product-gallery__image {
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+    }
 }
