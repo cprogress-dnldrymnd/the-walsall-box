@@ -212,7 +212,7 @@ h6 {
     flex-direction: row-reverse;
     > .woocommerce-product-gallery__image {
         text-align: right;
-        width: auto;
+        width: auto !important;
     }
     .qodef-woo-thumbnails-wrapper {
         display: flex;
