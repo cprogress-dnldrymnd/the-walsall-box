@@ -157,5 +157,11 @@ h6 {
     margin-right: 40px; }
     .woocommerce-product-gallery__wrapper .qodef-woo-thumbnails-wrapper .woocommerce-product-gallery__image:not(:last-child) {
       margin-bottom: 40px; }
+      @media (max-width: 575px) {
+        .woocommerce-product-gallery__wrapper .qodef-woo-thumbnails-wrapper .woocommerce-product-gallery__image:not(:last-child) {
+          margin-bottom: 20px; } }
+    @media (max-width: 575px) {
+      .woocommerce-product-gallery__wrapper .qodef-woo-thumbnails-wrapper {
+        margin-right: 20px; } }
 
 /*# sourceMappingURL=style.css.map */
