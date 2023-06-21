@@ -1,0 +1,15 @@
+1.1.1
+- Updated Esmee Core to 1.1
+- Updated Revolution Slider to 6.6.10
+- Updated Qode Framework plugin to 1.2
+- Fixed Sticky Header Widget area
+- Fixed potential security vulnerability for theme and qode-framework
+- Fixed translation domain in some parts
+- Improved EsmeeCoreElementorWidgetBase with get_style_depends method
+- Changed _register_controls deprecated function with register_controls (Elementor 3.1)
+- Changed elementor_widgets register hook
+- Improved Google Maps API with callback function
+
+1.x
+- Updated Esmee Core plugin to 1.0.1
+- Added Menu Order option to Team single
