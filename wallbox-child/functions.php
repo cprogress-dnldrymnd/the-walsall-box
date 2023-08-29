@@ -103,21 +103,26 @@ function action_woocommerce_single_variation()
 		global $product;
 		$variations = $product->get_children();
 		echo '<pre> ' . var_dump($variations) . ' </pre>';
+
+		$min_quantity = array();
+		foreach ($pricing_rules as $pricing_rule) {
+			foreach ($pricing_rule['rules'] as $rule) {
+				$min_quantity[] = $rule['from'];
+			}
+		}
 	?>
 		<table>
 			<tr>
 				<th>PRODUCT REFERENCE</th>
 				<th>DIMENSIONS</th>
 				<th>
-				MINUMUM NUMBER OF PACKS
+					MINUMUM NUMBER OF PACKS
 					<table>
 						<tr>
-							<?php foreach ($pricing_rules as $pricing_rule) { ?>
-									<?php foreach ($pricing_rule['rules'] as $rule) {  ?>
-										<td>
-											<?= $rule['from'] ?>
-										</td>
-								<?php } ?>
+							<?php foreach ($min_quantity as $qty) {  ?>
+								<td>
+									<?= $qty ?>
+								</td>
 							<?php } ?>
 						</tr>
 					</table>
