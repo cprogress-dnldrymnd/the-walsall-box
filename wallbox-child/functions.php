@@ -119,7 +119,7 @@ function action_woocommerce_single_variation()
 				<th>DIMENSIONS</th>
 				<th>
 					MINUMUM NUMBER OF PACKS
-					<table>
+					<table class="table-quantity-price">
 						<tr>
 							<?php foreach ($min_quantity as $qty) {  ?>
 								<td>
@@ -155,8 +155,7 @@ function action_woocommerce_single_variation()
 						<?= $product_variation->get_dimensions(); ?>
 					</td>
 					<td>
-
-						<table>
+						<table class="table-quantity-price">
 							<tr>
 								<?php foreach ($min_quantity as $qty) {  ?>
 									<td>
