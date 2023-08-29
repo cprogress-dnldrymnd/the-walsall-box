@@ -105,10 +105,21 @@ function action_woocommerce_single_variation()
 		echo '<pre> ' . var_dump($variations) . ' </pre>';
 	?>
 		<table>
+			<tr>
+				<th>PRODUCT REFERENCE</th>
+				<th>DIMENSIONS</th>
+				<th>MINUMUM NUMBER OF PACKS</th>
+				<th>NUMBER OF PACKS</th>
+				<th>PRICE</th>
+
+			</tr>
 			<?php foreach ($variations as $variation) { ?>
 				<tr>
 					<td>
 						<?= get_the_title($variation) ?>
+					</td>
+					<td>
+						<?= do_shortcode('[add_to_cart id=' . $variation . ']') ?>
 					</td>
 				</tr>
 			<?php } ?>
