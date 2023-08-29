@@ -150,7 +150,7 @@ function action_custom_pricing_table()
 					}
 				}
 				?>
-				<tr>
+				<tr class="table-row-variation">
 					<td>
 						<?= get_the_title($product_variation->get_id()) ?>
 					</td>
