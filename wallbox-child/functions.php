@@ -209,7 +209,9 @@ function action_wp_footer()
 			console.log('Math.abs(this)' + Math.abs(this));
 
 			if (closest == null || Math.abs(this - goal) < Math.abs(closest - goal)) {
-				closest = Math.abs(this);
+				if (Math.abs(this) >= Math.abs(closest)) {
+					closest = Math.abs(this);
+				}
 			}
 		});
 		console.log(closest);
