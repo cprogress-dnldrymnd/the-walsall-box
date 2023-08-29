@@ -80,7 +80,7 @@ function woo_enquire_tab($tabs)
 
 	// Adds the new tab
 
-	$tabs['test_tab'] = array(
+	$tabs['enquire_tab'] = array(
 		'title'    => __('ENQUIRE ABOUT THIS PRODUCT', 'woocommerce'),
 		'priority' => 50,
 		'callback' => 'woo_enquire_tab_content'
