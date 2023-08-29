@@ -214,12 +214,15 @@ function action_wp_footer()
 
 		jQuery(".variation-qty").on("keyup", function() {
 			$val = jQuery(this).val();
-			get_total($val);
+			$row_id = jQuery(this).attr('for');
+			get_total($val, $row_id);
 
 		});
 
-		function get_total($val) {
-			console.log(get_closes(theArray, $val));
+		function get_total($val, $row_id) {
+			$closest = get_closes(theArray, $val);
+			$data_price = jQuery($row_id).find('data-qty="'+$closest+'"');
+			console.log($data_price);
 		}
 
 		function get_closes(theArray, goal) {
