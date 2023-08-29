@@ -225,6 +225,7 @@ function action_wp_footer()
 				$data_price = jQuery($row_id).find('td[data-qty="' + $closest + '"]').attr('data-price');
 				$price = $data_price * $val
 				jQuery($row_id).find('.total-price').text('£' + $price.toFixed(2));
+				jQuery($row_id).find('.add_to_cart_button').attr('data-quantity', $val);
 			} else {
 				jQuery($row_id).find('.total-price').text('£0.00');
 			}
