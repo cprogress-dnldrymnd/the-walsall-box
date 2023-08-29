@@ -126,7 +126,7 @@ function action_custom_pricing_table()
 					<table class="table-quantity-price table-quantity">
 						<tr>
 							<?php foreach ($min_quantity as $qty) {  ?>
-								<td>
+								<td class="min-quantity" data-qty="<?= $qty ?>">
 									<?= $qty ?>
 								</td>
 							<?php } ?>
@@ -201,6 +201,11 @@ function action_wp_footer()
 	<script>
 		console.log(get_closes([1, 5, 10, 20], 19));
 
+		var theArray = jQuery('.min-quantity').map(function() {
+			return jQuery.trim(jQuery(this).text());
+		}).get();
+
+		var_dump(theArray);
 
 		function get_closes(theArray, goal) {
 			var theArray;
