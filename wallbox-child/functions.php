@@ -205,7 +205,7 @@ function action_wp_footer()
 			return jQuery.trim(jQuery(this).text());
 		}).get();
 
-		var_dump(theArray);
+		console.log(theArray);
 
 		function get_closes(theArray, goal) {
 			var theArray;
