@@ -207,6 +207,7 @@ function action_wp_footer()
 			console.log('Math.abs(this - goal)' + Math.abs(this - goal));
 			console.log('Math.abs(closest - goal)' + Math.abs(closest - goal));
 			console.log('Math.abs(this)' + Math.abs(this));
+			console.log('MMath.abs(closest)' + Math.Math.abs(closest));
 
 			if (closest == null || Math.abs(this - goal) < Math.abs(closest - goal)) {
 				if (Math.abs(this) >= Math.abs(closest)) {
