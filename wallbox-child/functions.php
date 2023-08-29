@@ -148,6 +148,11 @@ function action_woocommerce_single_variation()
 					<td>
 						<table>
 							<tr>
+								<?php foreach ($min_quantity as $qty) {  ?>
+									<td>
+										<?= $qty ?>
+									</td>
+								<?php } ?>
 								<?php foreach ($pricing_rules as $pricing_rule) { ?>
 									<?php if ($pricing_rule['variation_rules']['args']['variations'][0] == $product_variation->get_id()) { ?>
 										<?php foreach ($pricing_rule['rules'] as $rule) {  ?>
