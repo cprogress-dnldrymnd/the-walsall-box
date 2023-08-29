@@ -205,6 +205,13 @@ function action_wp_footer()
 			return parseInt(jQuery.trim(jQuery(this).text()));
 		}).get();
 
+
+		jQuery('.variation-qty').change(function(e) {
+			$val = jQuery(this).val();
+			console.log($val);
+			e.preventDefault();
+
+		});
 		console.log(theArray);
 
 		function get_closes(theArray, goal) {
