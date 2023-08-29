@@ -181,7 +181,7 @@ function action_custom_pricing_table()
 					</td>
 					<td>
 						<div class="total-price">£0.00</div>
-						<?= do_shortcode('[add_to_cart id=' . $product_variation->get_id() . ' quantity="4" show_price="FALSE"]') ?>
+						<?= do_shortcode('[add_to_cart id=' . $product_variation->get_id() . ' quantity="0" show_price="FALSE"]') ?>
 					</td>
 				</tr>
 			<?php } ?>
