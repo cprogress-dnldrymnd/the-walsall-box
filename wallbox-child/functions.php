@@ -202,7 +202,7 @@ function action_wp_footer()
 		console.log(get_closes([1, 5, 10, 20], 19));
 
 		var theArray = jQuery('.min-quantity').map(function() {
-			return jQuery.trim(jQuery(this).text());
+			return parseInt(jQuery.trim(jQuery(this).text()));
 		}).get();
 
 		console.log(theArray);
