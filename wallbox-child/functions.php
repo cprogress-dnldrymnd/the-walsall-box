@@ -102,7 +102,7 @@ function woo_enquire_tab_content()
 
 function action_woocommerce_single_variation() {
 	?>
-sdsdsds
+	<pre><?php var_dump(get_post_meta(get_the_ID())) ?></pre>
 	<?php
 }
 
