@@ -199,7 +199,7 @@ function action_wp_footer()
 	?>
 	<script>
 		var theArray = [1, 5, 10, 20];
-		var goal = 19;
+		var goal = 20;
 		var closest = null;
 
 		jQuery.each(theArray, function() {
