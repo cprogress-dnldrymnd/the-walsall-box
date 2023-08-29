@@ -198,7 +198,7 @@ function action_wp_footer()
 {
 	?>
 	<script>
-		console.log(get_closes([1, 5, 10, 20], 20));
+		console.log(get_closes([1, 5, 10, 20], 19));
 
 
 		function get_closes(theArray, goal) {
