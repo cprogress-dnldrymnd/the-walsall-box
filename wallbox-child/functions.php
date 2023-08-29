@@ -96,7 +96,7 @@ function woo_enquire_tab_content()
 	echo do_shortcode('[contact-form-7 id="5878" title="Contact form 1"]');
 }
 
-function action_woocommerce_single_variation()
+function action_custom_pricing_table()
 {
 	$pricing_rules = get_post_meta(get_the_ID(), '_pricing_rules', true);
 	if ($pricing_rules) {
@@ -185,4 +185,4 @@ function action_woocommerce_single_variation()
 	}
 }
 
-add_action('woocommerce_single_variation', 'action_woocommerce_single_variation');
+add_action('woocommerce_after_single_product_summary', 'action_custom_pricing_table');
