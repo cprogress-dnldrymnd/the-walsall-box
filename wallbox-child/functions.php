@@ -181,7 +181,7 @@ function action_custom_pricing_table()
 						<div class="qodef-quantity-buttons quantity">
 							<label class="screen-reader-text" for="quantity_64ee8192f3cb5">FEFCO 0201 – plain glued case quantity</label>
 							<span class="qodef-quantity-minus"></span>
-							<input type="text" id="quantity_64ee8192f3cb5" class="input-text variation-qty qty text qodef-quantity-input" data-step="1" data-min="1" data-max="" name="quantity" for="#variation-<?= $product_variation->get_id() ?>">
+							<input type="text" id="quantity_64ee8192f3cb5" class="input-text variation-qty qty text qodef-quantity-input" value="0" data-step="1" data-min="1" data-max="" name="quantity" for="#variation-<?= $product_variation->get_id() ?>">
 							<span class="qodef-quantity-plus"></span>
 						</div>
 					</td>
