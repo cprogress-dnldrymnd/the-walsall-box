@@ -137,6 +137,14 @@ function action_woocommerce_single_variation()
 			<?php foreach ($variations as $variation) { ?>
 				<?php
 				$product_variation = wc_get_product($variation);
+				$price_arr = array();
+				foreach ($pricing_rules as $pricing_rule) {
+					if ($pricing_rule['variation_rules']['args']['variations'][0] == $product_variation->get_id()) {
+						foreach ($pricing_rule['rules'] as $rule) {
+							$price_arr[] = $rule['amount'];
+						}
+					}
+				}
 				?>
 				<tr>
 					<td>
@@ -159,14 +167,8 @@ function action_woocommerce_single_variation()
 						</table>
 						<table>
 							<tr>
-								<?php foreach ($pricing_rules as $pricing_rule) { ?>
-									<?php if ($pricing_rule['variation_rules']['args']['variations'][0] == $product_variation->get_id()) { ?>
-										<?php foreach ($pricing_rule['rules'] as $rule) {  ?>
-											<td>
-												<?= $rule['amount'] ?>
-											</td>
-										<?php } ?>
-									<?php } ?>
+								<?php foreach ($price_arr as $price) { ?>
+									<?= $price ?>
 								<?php } ?>
 							</tr>
 						</table>
