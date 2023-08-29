@@ -45,7 +45,7 @@ function action_woocommerce_after_add_to_cart_form()
 {
 ?>
 	<div class="button-group">
-		<a class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link" href="https://esmee.qodeinteractive.com/shop-right-sidebar/" target="_self">
+		<a class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link" href="#" target="_self">
 			<span class="qodef-m-text">GET A QUOTE</span>
 		</a>
 
