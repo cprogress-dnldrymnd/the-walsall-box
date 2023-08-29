@@ -206,11 +206,21 @@ function action_wp_footer()
 		}).get();
 
 
-		jQuery(".variation-qty").on("change, keyup", function() {
+		jQuery(".variation-qty").on("change", function() {
 			$val = jQuery(this).val();
-			console.log($val);
+			get_total($val);
+
 		});
-		console.log(theArray);
+
+		jQuery(".variation-qty").on("keyup", function() {
+			$val = jQuery(this).val();
+			get_total($val);
+
+		});
+
+		function get_total($val) {
+			console.log(get_closes(theArray, $val));
+		}
 
 		function get_closes(theArray, goal) {
 			var theArray;
