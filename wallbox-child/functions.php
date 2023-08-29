@@ -123,7 +123,7 @@ function action_custom_pricing_table()
 				<th>DIMENSIONS</th>
 				<th>
 					MINUMUM NUMBER OF PACKS
-					<table class="table-quantity-price">
+					<table class="table-quantity-price table-quantity">
 						<tr>
 							<?php foreach ($min_quantity as $qty) {  ?>
 								<td>
@@ -188,8 +188,27 @@ function action_custom_pricing_table()
 		<?php
 		?>
 		<pre><?php var_dump($pricing_rules) ?></pre>
-<?php
+	<?php
 	}
 }
 
 add_action('woocommerce_after_single_product_summary', 'action_custom_pricing_table');
+
+function action_wp_footer()
+{
+	?>
+	<script>
+		var theArray = [1, 3, 8, 10, 13];
+		var goal = 4;
+		var closest = null;
+
+		$.each(theArray, function() {
+			if (closest == null || Math.abs(this - goal) < Math.abs(closest - goal)) {
+				closest = this;
+			}
+		});
+	</script>
+<?php
+}
+
+add_action('wp_footer', 'action_wp_footer');
