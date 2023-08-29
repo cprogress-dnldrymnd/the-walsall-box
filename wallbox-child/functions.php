@@ -165,15 +165,6 @@ function action_woocommerce_single_variation()
 								<?php } ?>
 							</tr>
 						</table>
-						<table>
-							<tr>
-								<?php foreach ($price_arr as $price) { ?>
-									<td>
-										<?= $price ?>
-									</td>
-								<?php } ?>
-							</tr>
-						</table>
 					</td>
 					<td>
 						<input type="number" name="qty">
