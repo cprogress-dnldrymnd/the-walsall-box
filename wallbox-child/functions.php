@@ -228,6 +228,8 @@ function action_wp_footer()
 				jQuery($row_id).find('.add_to_cart_button').attr('data-quantity', $val);
 			} else {
 				jQuery($row_id).find('.total-price').text('£0.00');
+				jQuery($row_id).find('.add_to_cart_button').attr('data-quantity', 0);
+
 			}
 		}
 
