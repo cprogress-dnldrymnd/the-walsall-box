@@ -238,7 +238,13 @@ h6 {
         }
     }
 }
-
+.table-product-pricing {
+    tr {
+        th {
+            text-align: center;
+        }
+    }
+}
 .table-quantity-price {
     tr {
         display: flex;

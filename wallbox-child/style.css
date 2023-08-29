@@ -172,6 +172,9 @@ h6 {
       .woocommerce-product-gallery__wrapper .qodef-woo-thumbnails-wrapper {
         margin-right: 20px; } }
 
+.table-product-pricing tr th {
+  text-align: center; }
+
 .table-quantity-price tr {
   display: flex;
   border: none !important; }

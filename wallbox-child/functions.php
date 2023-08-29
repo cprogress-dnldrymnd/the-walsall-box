@@ -117,7 +117,7 @@ function action_custom_pricing_table()
 				display: none !important;
 			}
 		</style>
-		<table>
+		<table class="table-product-pricing">
 			<tr>
 				<th>PRODUCT REFERENCE</th>
 				<th>DIMENSIONS</th>
