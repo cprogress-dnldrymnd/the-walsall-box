@@ -104,6 +104,17 @@ function action_woocommerce_single_variation()
 		$variations = $product->get_children();
 		echo '<pre> ' . var_dump($variations) . ' </pre>';
 	?>
+		<table>
+			<?php foreach ($variations as $variation) { ?>
+				<tr>
+					<td>
+						<?= get_the_title($variation) ?>
+					</td>
+				</tr>
+			<?php } ?>
+		</table>
+		<?php
+		?>
 		<pre><?php var_dump($pricing_rules) ?></pre>
 <?php
 	}
