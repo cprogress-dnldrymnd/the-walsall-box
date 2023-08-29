@@ -127,8 +127,7 @@ function action_woocommerce_single_variation()
 					</td>
 					<td>
 						<?php foreach ($pricing_rules as $pricing_rule) { ?>
-							<?php if($pricing_rule['variation_rules'] == $variation) ?>
-							<?php } ?>
+						
 						<?php } ?>
 					</td>
 					<td>
