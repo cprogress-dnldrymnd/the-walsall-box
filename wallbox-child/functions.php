@@ -165,7 +165,7 @@ function action_custom_pricing_table()
 									<td>
 										<?php
 										if ($price_arr[$qty]) {
-											echo '£' . $price_arr[$qty];
+											echo '£' . floatval($price_arr[$qty]);
 										} else {
 											echo '-';
 										}
