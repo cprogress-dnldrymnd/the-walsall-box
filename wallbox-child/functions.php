@@ -163,7 +163,7 @@ function action_woocommerce_single_variation()
 							<tr>
 								<?php foreach ($min_quantity as $qty) {  ?>
 									<td>
-										£ <?= $price_arr[$qty] ?>
+										£<?= $price_arr[$qty] ?>
 									</td>
 								<?php } ?>
 							</tr>
