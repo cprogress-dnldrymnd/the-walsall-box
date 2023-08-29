@@ -198,7 +198,7 @@ function action_wp_footer()
 {
 	?>
 	<script>
-		var theArray = [1, 3, 8, 10, 13];
+		var theArray = [1, 5, 10, 20];
 		var goal = 4;
 		var closest = null;
 
