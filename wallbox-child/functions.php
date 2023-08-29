@@ -102,7 +102,6 @@ function action_woocommerce_single_variation()
 	if ($pricing_rules) {
 		global $product;
 		$variations = $product->get_children();
-		echo '<pre> ' . var_dump($variations) . ' </pre>';
 
 		$min_quantity = array();
 		foreach ($pricing_rules as $pricing_rule) {
