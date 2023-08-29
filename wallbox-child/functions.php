@@ -160,6 +160,9 @@ function action_woocommerce_single_variation()
 						</table>
 					</td>
 					<td>
+						<input type="number" name="qty">
+					</td>
+					<td>
 						<?= do_shortcode('[add_to_cart id=' . $product_variation->get_id() . ' quantity="4" show_price="FALSE"]') ?>
 					</td>
 				</tr>
