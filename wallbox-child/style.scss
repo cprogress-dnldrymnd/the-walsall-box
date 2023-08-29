@@ -242,10 +242,13 @@ h6 {
 .table-quantity-price {
     tr {
         display: flex;
-        td,th {
+        border: none !important;
+        td,
+        th {
             flex: 1%;
             display: block;
-            border: none  !important;
+            border: none !important;
+            padding: 5px;
         }
     }
 }

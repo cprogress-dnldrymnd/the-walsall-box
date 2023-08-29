@@ -173,10 +173,13 @@ h6 {
         margin-right: 20px; } }
 
 .table-quantity-price tr {
-  display: flex; }
-  .table-quantity-price tr td, .table-quantity-price tr th {
+  display: flex;
+  border: none !important; }
+  .table-quantity-price tr td,
+  .table-quantity-price tr th {
     flex: 1%;
     display: block;
-    border: none  !important; }
+    border: none !important;
+    padding: 5px; }
 
 /*# sourceMappingURL=style.css.map */
