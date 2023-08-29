@@ -208,8 +208,8 @@ function action_wp_footer()
 
 		jQuery(".variation-qty").on("change", function() {
 			$val = jQuery(this).val();
-			get_total($val);
-
+			$row_id = jQuery(this).attr('for');
+			get_total($val, $row_id);
 		});
 
 		jQuery(".variation-qty").on("keyup", function() {
