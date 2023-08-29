@@ -198,24 +198,22 @@ function action_wp_footer()
 {
 	?>
 	<script>
-		var theArray = [1, 5, 10, 20];
-		var goal = 9;
-		var closest = null;
+		console.log(get_closes([1, 5, 10, 20], 20));
 
-		jQuery.each(theArray, function() {
 
-			console.log('Math.abs(this - goal)' + Math.abs(this - goal));
-			console.log('Math.abs(closest - goal)' + Math.abs(closest - goal));
-			console.log('Math.abs(this)' + Math.abs(this));
-			console.log('Math.abs(closest)' + Math.abs(closest));
-
-			if (closest == null || Math.abs(this - goal) < Math.abs(closest - goal)) {
-				if (Math.abs(goal) >= Math.abs(this)) {
-					closest = Math.abs(this);
+		function get_closes(theArray, goal) {
+			var theArray;
+			var goal;
+			var closest = null;
+			jQuery.each(theArray, function() {
+				if (closest == null || Math.abs(this - goal) < Math.abs(closest - goal)) {
+					if (Math.abs(goal) >= Math.abs(this)) {
+						closest = Math.abs(this);
+					}
 				}
-			}
-		});
-		console.log(closest);
+			});
+			return closest;
+		}
 	</script>
 <?php
 }
