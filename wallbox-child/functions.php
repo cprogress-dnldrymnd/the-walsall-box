@@ -162,10 +162,11 @@ function action_custom_pricing_table()
 						<table class="table-quantity-price">
 							<tr>
 								<?php foreach ($min_quantity as $qty) {  ?>
-									<td>
+									<?php $price = number_format((float)$price_arr[$qty], 2, '.', ''); ?>
+									<td data-qty="<?= $qty ?>" data-price="<?= $price ?>">
 										<?php
 										if ($price_arr[$qty]) {
-											echo '£' . number_format((float)$price_arr[$qty], 2, '.', '');
+											echo '£' . $price;
 										} else {
 											echo '-';
 										}
