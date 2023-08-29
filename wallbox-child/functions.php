@@ -113,7 +113,7 @@ function action_custom_pricing_table()
 		asort($min_quantity);
 	?>
 		<style>
-			.variations {
+			.variations, .single_variation_wrap {
 				display: none !important;
 			}
 		</style>
