@@ -206,8 +206,9 @@ function action_wp_footer()
 			if (closest == null || Math.abs(this - goal) < Math.abs(closest - goal)) {
 				closest = this;
 			}
-			console.log(closest);
 		});
+		console.log(closest);
+
 	</script>
 <?php
 }
