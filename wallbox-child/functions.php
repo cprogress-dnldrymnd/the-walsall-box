@@ -128,9 +128,9 @@ function action_woocommerce_single_variation()
 					<td>
 						<?php foreach ($pricing_rules as $pricing_rule) { ?>
 							<?php if ($pricing_rule['variation_rules']['args']['variations'][0] == $product_variation->get_id()) { ?>
-								<?= $pricing_rule['rules']['from'] ?>
-								<?= var_dump($pricing_rule['rules']) ?>
-								lll
+								<?php foreach ($pricing_rule['rules'] as $rule) {  ?>
+									<?= var_dump($rule['from']) ?>
+								<?php } ?>
 							<?php } ?>
 						<?php } ?>
 					</td>
