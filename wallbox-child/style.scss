@@ -240,7 +240,7 @@ h6 {
 }
 .table-product-pricing {
     tr {
-        th {
+        th,td {
             text-align: center;
             vertical-align: middle;
         }
@@ -266,7 +266,6 @@ h6 {
             display: block;
             border: none !important;
             padding: 5px;
-            text-align: center;
         }
     }
 }
