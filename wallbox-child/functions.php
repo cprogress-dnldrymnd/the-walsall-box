@@ -119,6 +119,12 @@ function action_woocommerce_single_variation()
 						<?= get_the_title($variation) ?>
 					</td>
 					<td>
+						<?php
+						$product_variation = wc_get_product($variation);
+						?>
+						<?= $product_variation->get_dimensions(); ?>
+					</td>
+					<td>
 						<?= do_shortcode('[add_to_cart id=' . $variation . ' quantity="4" show_price="FALSE"]') ?>
 					</td>
 				</tr>
