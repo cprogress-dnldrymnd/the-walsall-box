@@ -99,3 +99,11 @@ function woo_enquire_tab_content()
 	echo do_shortcode('[contact-form-7 id="5878" title="Contact form 1"]');
 
 }
+
+function action_woocommerce_single_variation() {
+	?>
+sdsdsds
+	<?php
+}
+
+add_action('woocommerce_single_variation', 'action_woocommerce_single_variation');
