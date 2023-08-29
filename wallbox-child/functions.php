@@ -147,6 +147,16 @@ function action_woocommerce_single_variation()
 						<?= $product_variation->get_dimensions(); ?>
 					</td>
 					<td>
+
+						<table>
+							<tr>
+								<?php foreach ($min_quantity as $qty) {  ?>
+									<td>
+										<?= $qty ?>
+									</td>
+								<?php } ?>
+							</tr>
+						</table>
 						<table>
 							<tr>
 								<?php foreach ($pricing_rules as $pricing_rule) { ?>
