@@ -111,6 +111,7 @@ function action_woocommerce_single_variation()
 			}
 		}
 		$min_quantity = array_unique($min_quantity);
+		asort($min_quantity);
 	?>
 		<table>
 			<tr>
