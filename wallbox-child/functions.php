@@ -168,7 +168,9 @@ function action_woocommerce_single_variation()
 						<table>
 							<tr>
 								<?php foreach ($price_arr as $price) { ?>
-									<?= $price ?>
+									<td>
+										<?= $price ?>
+									</td>
 								<?php } ?>
 							</tr>
 						</table>
