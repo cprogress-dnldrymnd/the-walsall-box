@@ -119,7 +119,7 @@ function action_woocommerce_single_variation()
 						<?= get_the_title($variation) ?>
 					</td>
 					<td>
-						<?= do_shortcode('[add_to_cart id=' . $variation . ' quantity="1" show_price="FALSE"]') ?>
+						<?= do_shortcode('[add_to_cart id=' . $variation . ' quantity="4" show_price="FALSE"]') ?>
 					</td>
 				</tr>
 			<?php } ?>
