@@ -43,10 +43,9 @@ remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add
 
 function action_woocommerce_after_add_to_cart_form()
 {
-	?>
+?>
 	<div class="button-group">
-		<a class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link"
-			href="https://esmee.qodeinteractive.com/shop-right-sidebar/" target="_self">
+		<a class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link" href="https://esmee.qodeinteractive.com/shop-right-sidebar/" target="_self">
 			<span class="qodef-m-text">GET A QUOTE</span>
 		</a>
 
@@ -70,7 +69,6 @@ function woo_rename_tabs($tabs)
 	$tabs['additional_information']['title'] = __('TECHNICAL SPECIFICATION'); // Rename the additional information tab
 
 	return $tabs;
-
 }
 
 /**
@@ -89,7 +87,6 @@ function woo_enquire_tab($tabs)
 	);
 
 	return $tabs;
-
 }
 function woo_enquire_tab_content()
 {
@@ -97,13 +94,16 @@ function woo_enquire_tab_content()
 	// The new tab content
 
 	echo do_shortcode('[contact-form-7 id="5878" title="Contact form 1"]');
-
 }
 
-function action_woocommerce_single_variation() {
+function action_woocommerce_single_variation()
+{
+	$pricing_rules = get_post_meta(get_the_ID(), '_pricing_rules', true);
+	if ($pricing_rules) {
 	?>
-	<pre><?php var_dump(get_post_meta(get_the_ID(), '_pricing_rules', true)) ?></pre>
-	<?php
+		<pre><?php var_dump($pricing_rules) ?></pre>
+<?php
+	}
 }
 
 add_action('woocommerce_single_variation', 'action_woocommerce_single_variation');
