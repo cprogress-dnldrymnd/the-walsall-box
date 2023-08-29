@@ -112,11 +112,11 @@ function action_woocommerce_single_variation()
 		$min_quantity = array_unique($min_quantity);
 		asort($min_quantity);
 	?>
-	<style>
-		.variations {
-			display: none !important;
-		}
-	</style>
+		<style>
+			.variations {
+				display: none !important;
+			}
+		</style>
 		<table>
 			<tr>
 				<th>PRODUCT REFERENCE</th>
@@ -163,7 +163,7 @@ function action_woocommerce_single_variation()
 							<tr>
 								<?php foreach ($min_quantity as $qty) {  ?>
 									<td>
-										<?= $price_arr[$qty] ?>
+										£ <?= $price_arr[$qty] ?>
 									</td>
 								<?php } ?>
 							</tr>
