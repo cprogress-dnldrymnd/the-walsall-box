@@ -202,7 +202,7 @@ function action_wp_footer()
 		var goal = 4;
 		var closest = null;
 
-		$.each(theArray, function() {
+		jQuery.each(theArray, function() {
 			if (closest == null || Math.abs(this - goal) < Math.abs(closest - goal)) {
 				closest = this;
 			}
