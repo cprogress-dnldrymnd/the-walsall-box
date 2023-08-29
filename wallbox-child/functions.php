@@ -114,18 +114,25 @@ function action_woocommerce_single_variation()
 
 			</tr>
 			<?php foreach ($variations as $variation) { ?>
-				<tr>
-					<td>
-						<?= get_the_title($variation) ?>
-					</td>
-					<td>
-						<?php
+				<?php
 						$product_variation = wc_get_product($variation);
 						?>
+				<tr>
+					<td>
+						<?= get_the_title($product_variation->get_id()) ?>
+					</td>
+					<td>
+						
 						<?= $product_variation->get_dimensions(); ?>
 					</td>
 					<td>
-						<?= do_shortcode('[add_to_cart id=' . $variation . ' quantity="4" show_price="FALSE"]') ?>
+						<?php foreach ($pricing_rules as $pricing_rule) { ?>
+							<?php if($pricing_rule['variation_rules'] == $variation) ?>
+							<?php } ?>
+						<?php } ?>
+					</td>
+					<td>
+						<?= do_shortcode('[add_to_cart id=' . $product_variation->get_id() . ' quantity="4" show_price="FALSE"]') ?>
 					</td>
 				</tr>
 			<?php } ?>
