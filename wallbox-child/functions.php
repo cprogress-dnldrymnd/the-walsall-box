@@ -223,7 +223,8 @@ function action_wp_footer()
 			if ($val != '' || $val != 0) {
 				$closest = get_closes(theArray, $val);
 				$data_price = jQuery($row_id).find('td[data-qty="' + $closest + '"]').attr('data-price');
-				jQuery($row_id).find('.total-price').text('£' + toFixed($data_price * $val));
+				$price = $data_price * $val
+				jQuery($row_id).find('.total-price').text('£' + $price.toFixed(2));
 			} else {
 				jQuery($row_id).find('.total-price').text('£0.00');
 			}
