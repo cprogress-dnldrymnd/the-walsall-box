@@ -114,12 +114,10 @@ function action_woocommerce_single_variation()
 					<table>
 						<tr>
 							<?php foreach ($pricing_rules as $pricing_rule) { ?>
-								<?php if ($pricing_rule['variation_rules']['args']['variations'][0] == $product_variation->get_id()) { ?>
-									<?php foreach ($pricing_rule['rules'] as $rule) {  ?>
-										<td>
-											<?= $rule['from'] ?>
-										</td>
-									<?php } ?>
+								<?php foreach ($pricing_rule['rules'] as $rule) {  ?>
+									<td>
+										<?= $rule['from'] ?>
+									</td>
 								<?php } ?>
 							<?php } ?>
 						</tr>
