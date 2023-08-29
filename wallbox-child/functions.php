@@ -255,3 +255,14 @@ function action_wp_footer()
 }
 
 add_action('wp_footer', 'action_wp_footer');
+
+
+/**
+ * @snippet       Hide Weight, Dimensions @ WooCommerce Single Product
+ * @how-to        Get CustomizeWoo.com FREE
+ * @author        Rodolfo Melogli
+ * @compatible    WooCommerce 6
+ * @donate $9     https://businessbloomer.com/bloomer-armada/
+ */
+
+ add_filter( 'wc_product_enable_dimensions_display', '__return_false' );
