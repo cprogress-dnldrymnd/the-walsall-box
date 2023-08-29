@@ -188,7 +188,6 @@ function action_custom_pricing_table()
 		</table>
 		<?php
 		?>
-		<pre><?php var_dump($pricing_rules) ?></pre>
 	<?php
 	}
 }
