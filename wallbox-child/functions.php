@@ -108,21 +108,22 @@ function action_woocommerce_single_variation()
 			<tr>
 				<th>PRODUCT REFERENCE</th>
 				<th>DIMENSIONS</th>
-				<th>MINUMUM NUMBER OF PACKS</th>
 				<th>
-					NUMBER OF PACKS
+				MINUMUM NUMBER OF PACKS
 					<table>
 						<tr>
 							<?php foreach ($pricing_rules as $pricing_rule) { ?>
-								<?php foreach ($pricing_rule['rules'] as $rule) {  ?>
-									<td>
-										<?= $rule['from'] ?>
-									</td>
+									<?php foreach ($pricing_rule['rules'] as $rule) {  ?>
+										<td>
+											<?= $rule['from'] ?>
+										</td>
 								<?php } ?>
 							<?php } ?>
 						</tr>
 					</table>
 				</th>
+				<th>NUMBER OF PACKS</th>
+
 				<th>PRICE</th>
 
 			</tr>
