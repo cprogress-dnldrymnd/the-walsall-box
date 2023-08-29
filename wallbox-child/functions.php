@@ -45,11 +45,11 @@ function action_woocommerce_after_add_to_cart_form()
 {
 ?>
 	<div class="button-group">
-		<a class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link" href="#" target="_self">
+		<a class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link" href="#tab-enquire_tab" target="_self">
 			<span class="qodef-m-text">GET A QUOTE</span>
 		</a>
 
-		<a class="button-link" target="_self" href="#tab-enquire_tab">
+		<a class="button-link" target="_self" href="#product-tabs">
 			<span class="qodef-m-text">MORE INFORMATION</span>
 		</a>
 	</div>
