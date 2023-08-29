@@ -109,7 +109,22 @@ function action_woocommerce_single_variation()
 				<th>PRODUCT REFERENCE</th>
 				<th>DIMENSIONS</th>
 				<th>MINUMUM NUMBER OF PACKS</th>
-				<th>NUMBER OF PACKS</th>
+				<th>
+					NUMBER OF PACKS
+					<table>
+						<tr>
+							<?php foreach ($pricing_rules as $pricing_rule) { ?>
+								<?php if ($pricing_rule['variation_rules']['args']['variations'][0] == $product_variation->get_id()) { ?>
+									<?php foreach ($pricing_rule['rules'] as $rule) {  ?>
+										<td>
+											<?= $rule['from'] ?>
+										</td>
+									<?php } ?>
+								<?php } ?>
+							<?php } ?>
+						</tr>
+					</table>
+				</th>
 				<th>PRICE</th>
 
 			</tr>
@@ -126,14 +141,19 @@ function action_woocommerce_single_variation()
 						<?= $product_variation->get_dimensions(); ?>
 					</td>
 					<td>
-						<?php foreach ($pricing_rules as $pricing_rule) { ?>
-							<?php if ($pricing_rule['variation_rules']['args']['variations'][0] == $product_variation->get_id()) { ?>
-								<?php foreach ($pricing_rule['rules'] as $rule) {  ?>
-									<?= $rule['from'] ?>
-									<?= $rule['amount'] ?>
+						<table>
+							<tr>
+								<?php foreach ($pricing_rules as $pricing_rule) { ?>
+									<?php if ($pricing_rule['variation_rules']['args']['variations'][0] == $product_variation->get_id()) { ?>
+										<?php foreach ($pricing_rule['rules'] as $rule) {  ?>
+											<td>
+												<?= $rule['amount'] ?>
+											</td>
+										<?php } ?>
+									<?php } ?>
 								<?php } ?>
-							<?php } ?>
-						<?php } ?>
+							</tr>
+						</table>
 					</td>
 					<td>
 						<?= do_shortcode('[add_to_cart id=' . $product_variation->get_id() . ' quantity="4" show_price="FALSE"]') ?>
