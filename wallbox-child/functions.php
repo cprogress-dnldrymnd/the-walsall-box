@@ -141,7 +141,7 @@ function action_woocommerce_single_variation()
 				foreach ($pricing_rules as $pricing_rule) {
 					if ($pricing_rule['variation_rules']['args']['variations'][0] == $product_variation->get_id()) {
 						foreach ($pricing_rule['rules'] as $rule) {
-							$price_arr[] = $rule['amount'];
+							$price_arr[$rule['from']] = $rule['amount'];
 						}
 					}
 				}
@@ -160,7 +160,7 @@ function action_woocommerce_single_variation()
 							<tr>
 								<?php foreach ($min_quantity as $qty) {  ?>
 									<td>
-										<?= $qty ?>
+										<?= $price_arr[$qty] ?>
 									</td>
 								<?php } ?>
 							</tr>
