@@ -102,7 +102,7 @@ function woo_enquire_tab_content()
 
 function action_woocommerce_single_variation() {
 	?>
-	<pre><?php var_dump(get_post_meta(get_the_ID(), '_pricing_rules', true)) ?></pre>
+	<pre><?php var_dump(get_post_meta(6365, '_pricing_rules', true)) ?></pre>
 	<?php
 }
 
