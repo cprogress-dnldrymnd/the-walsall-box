@@ -183,11 +183,13 @@ h6 {
 .table-product-pricing .total-price {
   font-weight: bold; }
 .table-product-pricing .add_to_cart_button[data-quantity="0"] {
-  pointer-events: none; }
+  pointer-events: none;
+  opacity: 7; }
 
 .table-quantity-price tr {
   display: flex;
-  border: none !important; }
+  border: none !important;
+  cursor: pointer; }
   .table-quantity-price tr td,
   .table-quantity-price tr th {
     flex: 1%;

@@ -257,12 +257,14 @@ h6 {
     }
     .add_to_cart_button[data-quantity="0"] {
         pointer-events: none;
+        opacity: 7;
     }
 }
 .table-quantity-price {
     tr {
         display: flex;
         border: none !important;
+        cursor: pointer;
         td,
         th {
             flex: 1%;
