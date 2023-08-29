@@ -110,6 +110,7 @@ function action_woocommerce_single_variation()
 				$min_quantity[] = $rule['from'];
 			}
 		}
+		$min_quantity = array_unique($min_quantity);
 	?>
 		<table>
 			<tr>
