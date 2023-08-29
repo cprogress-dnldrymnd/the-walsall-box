@@ -49,7 +49,7 @@ function action_woocommerce_after_add_to_cart_form()
 			<span class="qodef-m-text">GET A QUOTE</span>
 		</a>
 
-		<a class="button-link" target="_self">
+		<a class="button-link" target="_self" href="#tab-enquire_tab">
 			<span class="qodef-m-text">MORE INFORMATION</span>
 		</a>
 	</div>
