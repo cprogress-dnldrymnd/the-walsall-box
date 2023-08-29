@@ -209,8 +209,10 @@ function action_wp_footer()
 			console.log('Math.abs(this)' + Math.abs(this));
 			console.log('Math.abs(closest)' + Math.abs(closest));
 
-			if (Math.abs(closest) >= Math.abs(this)) {
-				closest = Math.abs(this);
+			if (closest == null || Math.abs(this - goal) < Math.abs(closest - goal)) {
+				if (Math.abs(goal) >= Math.abs(this)) {
+					closest = Math.abs(this);
+				}
 			}
 		});
 		console.log(closest);
