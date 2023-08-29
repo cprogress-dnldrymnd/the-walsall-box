@@ -182,6 +182,8 @@ h6 {
     width: 100%; }
 .table-product-pricing .total-price {
   font-weight: bold; }
+.table-product-pricing .add_to_cart_button[data-quantity="0"] {
+  pointer-events: none; }
 
 .table-quantity-price tr {
   display: flex;

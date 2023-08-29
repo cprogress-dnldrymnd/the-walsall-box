@@ -255,6 +255,9 @@ h6 {
     .total-price {
         font-weight: bold;
     }
+    .add_to_cart_button[data-quantity="0"] {
+        pointer-events: none;
+    }
 }
 .table-quantity-price {
     tr {
