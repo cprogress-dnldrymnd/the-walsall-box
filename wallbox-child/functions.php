@@ -198,8 +198,8 @@ function action_wp_footer()
 {
 	?>
 	<script>
-		var theArray = [1, 5, 10, 20];
-		var goal = 19;
+		var theArray = [1, 5, 10, 12];
+		var goal = 11;
 		var closest = null;
 
 		jQuery.each(theArray, function() {
