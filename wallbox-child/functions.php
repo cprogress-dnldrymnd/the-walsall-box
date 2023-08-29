@@ -100,6 +100,9 @@ function action_woocommerce_single_variation()
 {
 	$pricing_rules = get_post_meta(get_the_ID(), '_pricing_rules', true);
 	if ($pricing_rules) {
+		global $product;
+		$variations = $product->get_children();
+		echo '<pre> ' . var_dump($variations) . ' </pre>';
 	?>
 		<pre><?php var_dump($pricing_rules) ?></pre>
 <?php
