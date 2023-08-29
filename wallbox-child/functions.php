@@ -115,19 +115,21 @@ function action_woocommerce_single_variation()
 			</tr>
 			<?php foreach ($variations as $variation) { ?>
 				<?php
-						$product_variation = wc_get_product($variation);
-						?>
+				$product_variation = wc_get_product($variation);
+				?>
 				<tr>
 					<td>
 						<?= get_the_title($product_variation->get_id()) ?>
 					</td>
 					<td>
-						
+
 						<?= $product_variation->get_dimensions(); ?>
 					</td>
 					<td>
 						<?php foreach ($pricing_rules as $pricing_rule) { ?>
-						
+							<?php if ($pricing_rule['variation_rules'] == $variation) { ?>
+								<?= $pricing_rule['rules']['mode']['from'] ?>
+							<?php } ?>
 						<?php } ?>
 					</td>
 					<td>
