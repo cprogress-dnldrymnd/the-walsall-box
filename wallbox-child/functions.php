@@ -113,7 +113,8 @@ function action_custom_pricing_table()
 		asort($min_quantity);
 	?>
 		<style>
-			.variations, .single_variation_wrap {
+			.variations,
+			.single_variation_wrap {
 				display: none !important;
 			}
 		</style>
@@ -177,7 +178,12 @@ function action_custom_pricing_table()
 						</table>
 					</td>
 					<td>
-						<input type="number" name="qty" class="variation-qty" for="#variation-<?= $product_variation->get_id() ?>">
+						<div class="qodef-quantity-buttons quantity">
+							<label class="screen-reader-text" for="quantity_64ee8192f3cb5">FEFCO 0201 – plain glued case quantity</label>
+							<span class="qodef-quantity-minus"></span>
+							<input type="text" id="quantity_64ee8192f3cb5" class="input-text variation-qty qty text qodef-quantity-input" data-step="1" data-min="1" data-max="" name="quantity" for="#variation-<?= $product_variation->get_id() ?>">
+							<span class="qodef-quantity-plus"></span>
+						</div>
 					</td>
 					<td>
 						<div class="total-price">£0.00</div>
