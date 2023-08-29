@@ -163,7 +163,11 @@ function action_custom_pricing_table()
 							<tr>
 								<?php foreach ($min_quantity as $qty) {  ?>
 									<td>
-										£<?= $price_arr[$qty] ?>
+										<?php
+										if ($price_arr[$qty]) {
+											echo '£' . $price_arr[$qty];
+										}
+										?>
 									</td>
 								<?php } ?>
 							</tr>
