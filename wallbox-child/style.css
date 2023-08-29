@@ -174,8 +174,9 @@ h6 {
 
 .table-quantity-price tr {
   display: flex; }
-  .table-quantity-price tr td {
+  .table-quantity-price tr td, .table-quantity-price tr th {
     flex: 1%;
-    display: block; }
+    display: block;
+    border: none  !important; }
 
 /*# sourceMappingURL=style.css.map */
