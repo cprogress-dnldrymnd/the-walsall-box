@@ -206,11 +206,10 @@ function action_wp_footer()
 		}).get();
 
 
-		jQuery('.variation-qty').change(function(e) {
+		jQuery$(".variation-qty").on("change", function() {
 			$val = jQuery(this).val();
 			console.log($val);
 			e.preventDefault();
-
 		});
 		console.log(theArray);
 
