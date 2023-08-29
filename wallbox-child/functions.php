@@ -130,6 +130,7 @@ function action_woocommerce_single_variation()
 							<?php if ($pricing_rule['variation_rules']['args']['variations'][0] == $product_variation->get_id()) { ?>
 								<?php foreach ($pricing_rule['rules'] as $rule) {  ?>
 									<?= $rule['from'] ?>
+									<?= $rule['amount'] ?>
 								<?php } ?>
 							<?php } ?>
 						<?php } ?>
