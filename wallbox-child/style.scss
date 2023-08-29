@@ -244,6 +244,13 @@ h6 {
             text-align: center;
         }
     }
+    .add_to_cart_inline {
+        padding: 0 !important;
+        border: none !important;
+        a {
+            width: 100%;
+        }
+    }
 }
 .table-quantity-price {
     tr {
