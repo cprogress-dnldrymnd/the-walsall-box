@@ -180,6 +180,7 @@ h6 {
     flex: 1%;
     display: block;
     border: none !important;
-    padding: 5px; }
+    padding: 5px;
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
