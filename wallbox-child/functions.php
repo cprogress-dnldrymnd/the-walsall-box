@@ -176,7 +176,7 @@ function action_custom_pricing_table()
 						</table>
 					</td>
 					<td>
-						<input type="number" name="qty">
+						<input type="number" name="qty" class="variation-qty" for="variation-<?= $product_variation->get_id() ?>">
 					</td>
 					<td>
 						<div class="total-price">£0.00</div>
