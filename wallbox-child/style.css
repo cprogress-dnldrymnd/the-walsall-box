@@ -172,19 +172,21 @@ h6 {
       .woocommerce-product-gallery__wrapper .qodef-woo-thumbnails-wrapper {
         margin-right: 20px; } }
 
-.table-product-pricing tr th, .table-product-pricing tr td {
-  text-align: center;
-  vertical-align: middle; }
-.table-product-pricing .add_to_cart_inline {
-  padding: 0 !important;
-  border: none !important; }
-  .table-product-pricing .add_to_cart_inline a {
-    width: 100%; }
-.table-product-pricing .total-price {
-  font-weight: bold; }
-.table-product-pricing .add_to_cart_button[data-quantity="0"] {
-  pointer-events: none;
-  opacity: 0.5; }
+.table-product-pricing {
+  margin-top: 2rem; }
+  .table-product-pricing tr th, .table-product-pricing tr td {
+    text-align: center;
+    vertical-align: middle; }
+  .table-product-pricing .add_to_cart_inline {
+    padding: 0 !important;
+    border: none !important; }
+    .table-product-pricing .add_to_cart_inline a {
+      width: 100%; }
+  .table-product-pricing .total-price {
+    font-weight: bold; }
+  .table-product-pricing .add_to_cart_button[data-quantity="0"] {
+    pointer-events: none;
+    opacity: 0.5; }
 
 .table-quantity-price tr {
   display: flex;
