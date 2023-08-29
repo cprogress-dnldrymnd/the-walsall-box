@@ -220,11 +220,13 @@ function action_wp_footer()
 		});
 
 		function get_total($val, $row_id) {
-			$closest = get_closes(theArray, $val);
-			$data_price = jQuery($row_id).find('td[data-qty="' + $closest + '"]').attr('data-price');
-
-			jQuery($row_id).find('.total-price').text($data_price * $val);
-			console.log($data_price);
+			if ($val != '' || $val != 0) {
+				$closest = get_closes(theArray, $val);
+				$data_price = jQuery($row_id).find('td[data-qty="' + $closest + '"]').attr('data-price');
+				jQuery($row_id).find('.total-price').text('£' + toFixed($data_price * $val));
+			} else {
+				jQuery($row_id).find('.total-price').text('£0.00');
+			}
 		}
 
 		function get_closes(theArray, goal) {
