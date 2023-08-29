@@ -221,7 +221,7 @@ function action_wp_footer()
 
 		function get_total($val, $row_id) {
 			$closest = get_closes(theArray, $val);
-			$data_price = jQuery($row_id).find('data-qty="'+$closest+'"');
+			$data_price = jQuery($row_id).find('data-qty="'+$closest+'"').attr('data-price');
 			console.log($data_price);
 		}
 
