@@ -203,12 +203,15 @@ function action_wp_footer()
 		var closest = null;
 
 		jQuery.each(theArray, function() {
+
+			console.log('Math.abs(this - goal)' + Math.abs(this - goal));
+			console.log('Math.abs(closest - goal)' + Math.abs(closest - goal));
+
 			if (closest == null || Math.abs(this - goal) < Math.abs(closest - goal)) {
 				closest = Math.abs(this);
-			} 
+			}
 		});
 		console.log(closest);
-
 	</script>
 <?php
 }
