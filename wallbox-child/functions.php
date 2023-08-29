@@ -220,7 +220,7 @@ function action_wp_footer()
 		});
 
 		function get_total($val, $row_id) {
-			if ($val != '' || $val != 0) {
+			if ($val != '' && $val != 0) {
 				$closest = get_closes(theArray, $val);
 				$data_price = jQuery($row_id).find('td[data-qty="' + $closest + '"]').attr('data-price');
 				$price = $data_price * $val
@@ -229,7 +229,6 @@ function action_wp_footer()
 			} else {
 				jQuery($row_id).find('.total-price').text('£0.00');
 				jQuery($row_id).find('.add_to_cart_button').attr('data-quantity', 0);
-
 			}
 		}
 
