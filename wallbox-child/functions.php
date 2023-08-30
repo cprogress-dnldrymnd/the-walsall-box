@@ -286,7 +286,7 @@ function subpages()
 
 	</ul>
 <?php
-	ob_get_clean();
+	return ob_get_clean();
 }
 
 add_shortcode('subpages', 'subpages');
