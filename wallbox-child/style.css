@@ -224,10 +224,16 @@ h6 {
         width: 100%;
         height: 100%;
         object-fit: contain; }
-    .product-range-list .product-range-list-item .inner {
+    .product-range-list .product-range-list-item .outer {
       display: block;
       background-color: #e3e3e3;
       height: 100%;
-      padding: 1rem; }
+      padding: 1rem;
+      position: relative;
+      overflow: hidden; }
+      .product-range-list .product-range-list-item .outer .inner {
+        transition: 400ms; }
+      .product-range-list .product-range-list-item .outer:hover .inner {
+        transform: scale(1.1); }
 
 /*# sourceMappingURL=style.css.map */

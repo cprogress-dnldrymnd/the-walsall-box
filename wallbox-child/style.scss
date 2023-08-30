@@ -304,11 +304,21 @@ h6 {
                 object-fit: contain;
             }
         }
-        .inner {
+        .outer {
             display: block;
             background-color: #e3e3e3;
             height: 100%;
             padding: 1rem;
+            position: relative;
+            overflow: hidden;
+            .inner {
+                transition: 400ms;
+            }
+            &:hover {
+                .inner {
+                    transform: scale(1.1);
+                }
+            }
         }
     }
 }

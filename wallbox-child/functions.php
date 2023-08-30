@@ -279,14 +279,16 @@ function subpages()
 			<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($childPage->ID), 'medium'); ?>
 
 			<div class="product-range-list-item product-range-list-item-<?php echo $i; ?>">
-				<a class="inner" href="<?php echo get_permalink($childPage->ID); ?>">
-					<div class="image-box">
-						<img src="<?php echo $thumb[0]; ?>" alt="">
+				<a class="outer" href="<?php echo get_permalink($childPage->ID); ?>">
+					<div class="inner">
+						<div class="image-box">
+							<img src="<?php echo $thumb[0]; ?>" alt="">
+						</div>
+						<div class="heading-box">
+							<h3><?php echo $childPage->post_title; ?></h3>
+						</div>
+						<span class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link" href="https://thewalsallbox.theprogressteam.co.uk/2015/10/09/new-address/" target="_self"> <span class="qodef-m-text">Read More</span></span>
 					</div>
-					<div class="heading-box">
-						<h3><?php echo $childPage->post_title; ?></h3>
-					</div>
-					<span class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link" href="https://thewalsallbox.theprogressteam.co.uk/2015/10/09/new-address/" target="_self"> <span class="qodef-m-text">Read More</span></span>
 				</a>
 			</div>
 
