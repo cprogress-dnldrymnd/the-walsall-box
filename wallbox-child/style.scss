@@ -293,19 +293,19 @@ h6 {
         }
         .image-box {
             position: relative;
-            padding: 50%;
+            padding: 40%;
             position: relative;
             overflow: hidden;
             background-color: #e3e3e3;
             img {
                 position: absolute;
-                left: 50%;
-                top: 50%;
-                width: 90%;
-                height: 90%;
+                left: 30px;
+                top: 30px;
+                bottom: 30px;
+                right: 30px;
                 object-fit: contain;
+                object-position: center;
                 transition: 400ms;
-                transform: translate(-50%, -50%);
             }
         }
         .outer {
@@ -314,7 +314,7 @@ h6 {
 
             &:hover {
                 .image-box img {
-                    transform: scale(1.1) translate(-50%, -50%);;
+                    transform: scale(1.1);
                 }
             }
         }

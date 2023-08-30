@@ -215,23 +215,23 @@ h6 {
       font-family: "Jost", sans-serif !important; }
     .product-range-list .product-range-list-item .image-box {
       position: relative;
-      padding: 50%;
+      padding: 40%;
       position: relative;
       overflow: hidden;
       background-color: #e3e3e3; }
       .product-range-list .product-range-list-item .image-box img {
         position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 90%;
-        height: 90%;
+        left: 30px;
+        top: 30px;
+        bottom: 30px;
+        right: 30px;
         object-fit: contain;
-        transition: 400ms;
-        transform: translate(-50%, -50%); }
+        object-position: center;
+        transition: 400ms; }
     .product-range-list .product-range-list-item .outer {
       display: block;
       height: 100%; }
       .product-range-list .product-range-list-item .outer:hover .image-box img {
-        transform: scale(1.1) translate(-50%, -50%); }
+        transform: scale(1.1); }
 
 /*# sourceMappingURL=style.css.map */
