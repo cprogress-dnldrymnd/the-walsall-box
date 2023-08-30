@@ -256,6 +256,12 @@ h6 {
     }
     .total-price {
         font-weight: bold;
+        span {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: red;
+        }
     }
     .add_to_cart_button[data-quantity="0"],
     .add_to_cart_button.disabled {

@@ -185,6 +185,11 @@ h6 {
       width: 100%; }
   .table-product-pricing .total-price {
     font-weight: bold; }
+    .table-product-pricing .total-price span {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: red; }
   .table-product-pricing .add_to_cart_button[data-quantity="0"],
   .table-product-pricing .add_to_cart_button.disabled {
     pointer-events: none;
