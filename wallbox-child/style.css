@@ -235,4 +235,8 @@ h6 {
       .subpages .product-range-list .product-range-list-item .outer:hover .image-box img {
         transform: scale(1.1); }
 
+section.page-banner {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
 /*# sourceMappingURL=style.css.map */
