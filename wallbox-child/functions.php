@@ -284,7 +284,7 @@ function subpages()
 						<img src="<?php echo $thumb[0]; ?>" alt="">
 					</div>
 					<div class="heading-box">
-						<h4><?php echo $childPage->post_title; ?></h4>
+						<h3><?php echo $childPage->post_title; ?></h3>
 					</div>
 					<span class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link" href="https://thewalsallbox.theprogressteam.co.uk/2015/10/09/new-address/" target="_self"> <span class="qodef-m-text">Read More</span></span>
 				</a>
