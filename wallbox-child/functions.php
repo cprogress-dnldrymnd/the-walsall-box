@@ -272,19 +272,28 @@ function subpages()
 {
 	ob_start();
 ?>
-	<ul class='product-range-list page-menu'>
+	<div class='product-range-list page-menu'>
 		<?php $childPages = get_pages(array('child_of' => get_the_ID(), 'parent' => get_the_ID(), 'sort_column' => 'menu_order')); ?>
 		<?php $i = 0; ?>
 		<?php foreach ($childPages as $childPage) : ?>
 			<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($childPage->ID), 'sm-square'); ?>
 
-			<li style="background-image: url(<?php echo $thumb[0]; ?>)" class="product-range-list-item-<?php echo $i; ?>"><a href="<?php echo get_permalink($childPage->ID); ?>"><span><?php echo $childPage->post_title; ?></span></a></li>
+			<div class="product-range-list-item-<?php echo $i; ?>">
+				<a href="<?php echo get_permalink($childPage->ID); ?>">
+					<div class="image-box">
+						<img src="<?php echo $thumb[0]; ?>" alt="">
+					</div>
+					<div class="heading-box">
+						<h4><?php echo $childPage->post_title; ?></h4>
+					</div>
+				</a>
+			</div>
 
 			<?php $i++; ?>
 
 		<?php endforeach; ?>
 
-	</ul>
+	</div>
 <?php
 	return ob_get_clean();
 }
