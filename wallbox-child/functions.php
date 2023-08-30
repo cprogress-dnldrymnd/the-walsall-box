@@ -231,7 +231,8 @@ function action_wp_footer()
 
 				if ($data_price == 0.00) {
 					jQuery($row_id).find('.add_to_cart_button').addClass('disabled');
-					jQuery($row_id).find('.total-price').html('£0.00');
+					$minimun_is = jQuery($row_id).find('td[data-price="0.00"]').next().attr('data-qty');
+					jQuery($row_id).find('.total-price').html('£0.00 <span> Minimum Quantity is ' + $minimun_is + ' </span>');
 				} else {
 					$price = $data_price * $val
 					jQuery($row_id).find('.total-price').html('£' + $price.toFixed(2));
