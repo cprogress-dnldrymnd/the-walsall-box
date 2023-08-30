@@ -221,12 +221,11 @@ h6 {
       background-color: #e3e3e3; }
       .product-range-list .product-range-list-item .image-box img {
         position: absolute;
-        left: 30px;
-        top: 30px;
-        bottom: 30px;
-        right: 30px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
         object-fit: contain;
-        object-position: center;
         transition: 400ms; }
     .product-range-list .product-range-list-item .outer {
       display: block;
