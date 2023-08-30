@@ -271,34 +271,37 @@ add_filter('wc_product_enable_dimensions_display', '__return_false');
 function subpages()
 {
 	ob_start();
+	$childPages = get_pages(array('child_of' => get_the_ID(), 'parent' => get_the_ID(), 'sort_column' => 'menu_order'));
 ?>
-	<div class='product-range-list page-menu'>
-		<?php $childPages = get_pages(array('child_of' => get_the_ID(), 'parent' => get_the_ID(), 'sort_column' => 'menu_order')); ?>
-		<?php $i = 0; ?>
+	<div class="subpages">
 		<?php if ($childPages) { ?>
 			<h3>Click on the boxes below for further details:</h3>
 		<?php } ?>
-		<?php foreach ($childPages as $childPage) : ?>
-			<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($childPage->ID), 'medium'); ?>
+		<div class='product-range-list page-menu'>
+			<?php $i = 0; ?>
 
-			<div class="product-range-list-item product-range-list-item-<?php echo $i; ?>">
-				<a class="outer" href="<?php echo get_permalink($childPage->ID); ?>">
-					<div class="inner">
-						<div class="image-box">
-							<img src="<?php echo $thumb[0]; ?>" alt="">
+			<?php foreach ($childPages as $childPage) : ?>
+				<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($childPage->ID), 'medium'); ?>
+
+				<div class="product-range-list-item product-range-list-item-<?php echo $i; ?>">
+					<a class="outer" href="<?php echo get_permalink($childPage->ID); ?>">
+						<div class="inner">
+							<div class="image-box">
+								<img src="<?php echo $thumb[0]; ?>" alt="">
+							</div>
+							<div class="heading-box">
+								<h3><?php echo $childPage->post_title; ?></h3>
+							</div>
+							<span class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link" href="https://thewalsallbox.theprogressteam.co.uk/2015/10/09/new-address/" target="_self"> <span class="qodef-m-text">Read More</span></span>
 						</div>
-						<div class="heading-box">
-							<h3><?php echo $childPage->post_title; ?></h3>
-						</div>
-						<span class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link" href="https://thewalsallbox.theprogressteam.co.uk/2015/10/09/new-address/" target="_self"> <span class="qodef-m-text">Read More</span></span>
-					</div>
-				</a>
-			</div>
+					</a>
+				</div>
 
-			<?php $i++; ?>
+				<?php $i++; ?>
 
-		<?php endforeach; ?>
+			<?php endforeach; ?>
 
+		</div>
 	</div>
 <?php
 	return ob_get_clean();
