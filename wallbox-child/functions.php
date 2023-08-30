@@ -317,3 +317,26 @@ function subpages()
 }
 
 add_shortcode('subpages', 'subpages');
+
+
+/**
+ * @snippet       Variable Product Price Range: "From: min_price"
+ * @how-to        Get CustomizeWoo.com FREE
+ * @author        Rodolfo Melogli
+ * @compatible    WooCommerce 6
+ * @donate $9     https://businessbloomer.com/bloomer-armada/
+ */
+ 
+ add_filter( 'woocommerce_variable_price_html', 'bbloomer_variation_price_format_min', 9999, 2 );
+ 
+ function bbloomer_variation_price_format_min( $price, $product ) {
+	$prices = $product->get_variation_prices( true );
+	$min_price = current( $prices['price'] );
+	$max_price = end( $prices['price'] );
+	$min_reg_price = current( $prices['regular_price'] );
+	$max_reg_price = end( $prices['regular_price'] );
+	if ( $min_price !== $max_price || ( $product->is_on_sale() && $min_reg_price === $max_reg_price ) ) {
+	   $price = 'From: ' . wc_price( $min_price ) . $product->get_price_suffix();
+	}
+	return $price;
+ }
