@@ -241,7 +241,8 @@ h6 {
 .table-product-pricing {
     margin-top: 3rem;
     tr {
-        th,td {
+        th,
+        td {
             text-align: center;
             vertical-align: middle;
         }
@@ -273,5 +274,18 @@ h6 {
             border: none !important;
             padding: 5px;
         }
+    }
+}
+
+.product-range-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    .product-range-list-item {
+        flex: 0 0 auto;
+        width: 25%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
