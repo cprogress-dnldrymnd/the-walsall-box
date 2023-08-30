@@ -275,6 +275,9 @@ function subpages()
 	<div class='product-range-list page-menu'>
 		<?php $childPages = get_pages(array('child_of' => get_the_ID(), 'parent' => get_the_ID(), 'sort_column' => 'menu_order')); ?>
 		<?php $i = 0; ?>
+		<?php if ($childPages) { ?>
+			<h3>Click on the boxes below for further details:</h3>
+		<?php } ?>
 		<?php foreach ($childPages as $childPage) : ?>
 			<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($childPage->ID), 'medium'); ?>
 
