@@ -288,5 +288,12 @@ h6 {
         padding-left: 15px;
         padding-right: 15px;
         margin-bottom: 30px;
+        text-align: center;
+        a {
+            display: block;
+            background-color: #e3e3e3;
+            height: 100%;
+            padding: 1rem;
+        }
     }
 }
