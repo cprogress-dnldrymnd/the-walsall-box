@@ -214,6 +214,16 @@ h6 {
     text-align: center; }
     .product-range-list .product-range-list-item h4 {
       font-family: "Jost", sans-serif; }
+    .product-range-list .product-range-list-item .image-box {
+      position: relative;
+      padding: 40%; }
+      .product-range-list .product-range-list-item .image-box img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
     .product-range-list .product-range-list-item .inner {
       display: block;
       background-color: #e3e3e3;
