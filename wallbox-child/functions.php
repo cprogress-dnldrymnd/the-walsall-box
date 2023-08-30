@@ -229,13 +229,15 @@ function action_wp_footer()
 				$closest = get_closes(theArray, $val);
 				$data_price = jQuery($row_id).find('td[data-qty="' + $closest + '"]').attr('data-price');
 
-				if($data_price == 0.00) {
-					alert('dsdsds');
+				if ($data_price == 0.00) {
+					jQuery($row_id).find('.add_to_cart_button').addClass('disabled');
+				} else {
+					$price = $data_price * $val
+					jQuery($row_id).find('.total-price').text('£' + $price.toFixed(2));
+					jQuery($row_id).find('.add_to_cart_button').attr('data-quantity', $val);
+					jQuery($row_id).find('.add_to_cart_button').removeClass('disabled');
 				}
 
-				$price = $data_price * $val
-				jQuery($row_id).find('.total-price').text('£' + $price.toFixed(2));
-				jQuery($row_id).find('.add_to_cart_button').attr('data-quantity', $val);
 			} else {
 				jQuery($row_id).find('.total-price').text('£0.00');
 				jQuery($row_id).find('.add_to_cart_button').attr('data-quantity', 0);
