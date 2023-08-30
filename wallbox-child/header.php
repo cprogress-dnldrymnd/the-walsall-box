@@ -26,7 +26,7 @@
 			<?php
 			// Include title template
 			get_template_part( 'title' );
-			get_template_part( 'page-banner' );
+			get_template_part( 'template-parts/page-banner' );
 
 			// Hook to include additional content before page inner content
 			do_action( 'esmee_action_before_page_inner' );
