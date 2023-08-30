@@ -279,7 +279,7 @@ function subpages()
 			<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($childPage->ID), 'medium'); ?>
 
 			<div class="product-range-list-item product-range-list-item-<?php echo $i; ?>">
-				<a href="<?php echo get_permalink($childPage->ID); ?>">
+				<a class="inner" href="<?php echo get_permalink($childPage->ID); ?>">
 					<div class="image-box">
 						<img src="<?php echo $thumb[0]; ?>" alt="">
 					</div>

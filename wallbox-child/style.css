@@ -214,7 +214,7 @@ h6 {
     text-align: center; }
     .product-range-list .product-range-list-item h4 {
       font-family: "Jost", sans-serif; }
-    .product-range-list .product-range-list-item a {
+    .product-range-list .product-range-list-item .inner {
       display: block;
       background-color: #e3e3e3;
       height: 100%;
