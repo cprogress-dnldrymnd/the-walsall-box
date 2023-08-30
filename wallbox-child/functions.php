@@ -231,10 +231,10 @@ function action_wp_footer()
 
 				if ($data_price == 0.00) {
 					jQuery($row_id).find('.add_to_cart_button').addClass('disabled');
-					jQuery($row_id).find('.total-price').text('£0.00');
+					jQuery($row_id).find('.total-price').html('£0.00');
 				} else {
 					$price = $data_price * $val
-					jQuery($row_id).find('.total-price').text('£' + $price.toFixed(2));
+					jQuery($row_id).find('.total-price').html('£' + $price.toFixed(2));
 					jQuery($row_id).find('.add_to_cart_button').attr('data-quantity', $val);
 					jQuery($row_id).find('.add_to_cart_button').removeClass('disabled');
 				}
