@@ -217,7 +217,8 @@ h6 {
       position: relative;
       padding: 40%;
       position: relative;
-      overflow: hidden; }
+      overflow: hidden;
+      background-color: #e3e3e3; }
       .product-range-list .product-range-list-item .image-box img {
         position: absolute;
         left: 0;
@@ -228,9 +229,7 @@ h6 {
         transition: 400ms; }
     .product-range-list .product-range-list-item .outer {
       display: block;
-      background-color: #e3e3e3;
-      height: 100%;
-      padding: 1rem; }
+      height: 100%; }
       .product-range-list .product-range-list-item .outer:hover .image-box img {
         transform: scale(1.1); }
 

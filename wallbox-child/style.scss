@@ -296,6 +296,7 @@ h6 {
             padding: 40%;
             position: relative;
             overflow: hidden;
+            background-color: #e3e3e3;
             img {
                 position: absolute;
                 left: 0;
@@ -308,9 +309,7 @@ h6 {
         }
         .outer {
             display: block;
-            background-color: #e3e3e3;
             height: 100%;
-            padding: 1rem;
 
             &:hover {
                 .image-box img {
