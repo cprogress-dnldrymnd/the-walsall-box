@@ -265,4 +265,28 @@ add_action('wp_footer', 'action_wp_footer');
  * @donate $9     https://businessbloomer.com/bloomer-armada/
  */
 
- add_filter( 'wc_product_enable_dimensions_display', '__return_false' );
+add_filter('wc_product_enable_dimensions_display', '__return_false');
+
+
+function subpages()
+{
+	ob_start();
+?>
+	<ul class='product-range-list page-menu'>
+		<?php $childPages = get_pages(array('child_of' => get_the_ID(), 'parent' => get_the_ID(), 'sort_column' => 'menu_order')); ?>
+		<?php $i = 0; ?>
+		<?php foreach ($childPages as $childPage) : ?>
+			<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($childPage->ID), 'sm-square'); ?>
+
+			<li style="background-image: url(<?php echo $thumb[0]; ?>)" class="product-range-list-item-<?php echo $i; ?>"><a href="<?php echo get_permalink($childPage->ID); ?>"><span><?php echo $childPage->post_title; ?></span></a></li>
+
+			<?php $i++; ?>
+
+		<?php endforeach; ?>
+
+	</ul>
+<?php
+	ob_get_clean();
+}
+
+add_shortcode('subpages', 'subpages');
