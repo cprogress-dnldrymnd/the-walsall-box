@@ -276,7 +276,7 @@ function subpages()
 		<?php $childPages = get_pages(array('child_of' => get_the_ID(), 'parent' => get_the_ID(), 'sort_column' => 'menu_order')); ?>
 		<?php $i = 0; ?>
 		<?php foreach ($childPages as $childPage) : ?>
-			<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($childPage->ID), 'sm-square'); ?>
+			<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($childPage->ID), 'medium'); ?>
 
 			<div class="product-range-list-item-<?php echo $i; ?>">
 				<a href="<?php echo get_permalink($childPage->ID); ?>">
