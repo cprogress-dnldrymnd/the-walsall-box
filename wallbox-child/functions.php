@@ -335,8 +335,6 @@ add_shortcode('subpages', 'subpages');
 	$max_price = end( $prices['price'] );
 	$min_reg_price = current( $prices['regular_price'] );
 	$max_reg_price = end( $prices['regular_price'] );
-	if ( $min_price !== $max_price || ( $product->is_on_sale() && $min_reg_price === $max_reg_price ) ) {
-	   $price = 'From: ' . wc_price( $min_price ) . $product->get_price_suffix();
-	}
-	return $price;
+	
+	return '';
  }
