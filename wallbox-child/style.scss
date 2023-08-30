@@ -295,6 +295,10 @@ h6 {
         .image-box {
             position: relative;
             padding: 40%;
+            transition: 400ms;
+            position: relative;
+            overflow: hidden;
+
             img {
                 position: absolute;
                 left: 0;
@@ -309,13 +313,10 @@ h6 {
             background-color: #e3e3e3;
             height: 100%;
             padding: 1rem;
-            position: relative;
-            overflow: hidden;
-            .inner {
-                transition: 400ms;
-            }
+
+        
             &:hover {
-                .inner {
+                .image-box img {
                     transform: scale(1.1);
                 }
             }
