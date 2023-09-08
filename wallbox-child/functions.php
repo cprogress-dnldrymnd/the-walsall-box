@@ -120,7 +120,7 @@ function action_custom_pricing_table()
 			}
 		</style>
 		<table class="table-product-pricing">
-			<tr class="table-row-header">
+			<tr class="s">
 				<th>PRODUCT REFERENCE</th>
 				<th>DIMENSIONS</th>
 				<th>
@@ -167,6 +167,7 @@ function action_custom_pricing_table()
 								<?php foreach ($min_quantity as $qty) { ?>
 									<?php $price = number_format((float) $price_arr[$qty], 2, '.', ''); ?>
 									<td data-qty="<?= $qty ?>" data-price="<?= $price ?>">
+										<span class="hide-desktop"><?= $qty ?> PACK </span>
 										<?php
 										if ($price_arr[$qty]) {
 											echo '£' . $price;
@@ -174,7 +175,7 @@ function action_custom_pricing_table()
 										else {
 											echo '-';
 										}
-										?> <span class="hide-desktop">PACK</span>
+										?>
 									</td>
 								<?php } ?>
 							</tr>

@@ -173,9 +173,13 @@ h6 {
     .table-product-pricing .table-row-variation .hide-desktop {
       display: none; } }
   @media (max-width: 991px) {
+    .table-product-pricing .table-row-variation td {
+      text-align: left; } }
+  @media (max-width: 991px) {
     .table-product-pricing .table-row-variation {
       display: flex;
-      flex-wrap: wrap; } }
+      flex-wrap: wrap;
+      flex-direction: column; } }
   .table-product-pricing tr th,
   .table-product-pricing tr td {
     text-align: center;

@@ -248,9 +248,16 @@ h6 {
             }
         }
 
+        td {
+            @media(max-width: 991px) {
+                text-align: left;
+            }
+        }
+
         @media(max-width: 991px) {
             display: flex;
             flex-wrap: wrap;
+            flex-direction: column;
         }
     }
 
