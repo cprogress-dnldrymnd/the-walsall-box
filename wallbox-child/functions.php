@@ -192,7 +192,7 @@ function action_custom_pricing_table()
 							</div>
 						</div>
 					</td>
-					<td>
+					<td class="td-add-to-cart">
 						<div class="total-price">£0.00</div>
 						<?= do_shortcode('[add_to_cart id=' . $product_variation->get_id() . ' quantity="0" show_price="FALSE"]') ?>
 					</td>

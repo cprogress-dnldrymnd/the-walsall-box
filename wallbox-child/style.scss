@@ -268,12 +268,19 @@ h6 {
                 &.product-dimension {
                     border-bottom: 1px solid #e3e3e3;
                 }
+                &.td-add-to-cart {
+                    display: flex;
+                }
             }
         }
 
         @media (max-width: 991px) {
             display: flex;
             flex-wrap: wrap;
+            align-items: center;
+            .total-price {
+                margin-right: 1rem;
+            }
         }
     }
 

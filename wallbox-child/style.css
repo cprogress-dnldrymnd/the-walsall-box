@@ -187,11 +187,16 @@ h6 {
       .table-product-pricing .table-row-variation td.td-pricing, .table-product-pricing .table-row-variation td.product-ref, .table-product-pricing .table-row-variation td.product-dimension {
         width: 100%; }
       .table-product-pricing .table-row-variation td.product-dimension {
-        border-bottom: 1px solid #e3e3e3; } }
+        border-bottom: 1px solid #e3e3e3; }
+      .table-product-pricing .table-row-variation td.td-add-to-cart {
+        display: flex; } }
   @media (max-width: 991px) {
     .table-product-pricing .table-row-variation {
       display: flex;
-      flex-wrap: wrap; } }
+      flex-wrap: wrap;
+      align-items: center; }
+      .table-product-pricing .table-row-variation .total-price {
+        margin-right: 1rem; } }
   .table-product-pricing tr th,
   .table-product-pricing tr td {
     text-align: center;
