@@ -169,6 +169,9 @@ h6 {
   @media (max-width: 991px) {
     .table-product-pricing .table-row-header {
       display: none; } }
+  @media (min-width: 992px) {
+    .table-product-pricing .table-row-variation .hide-desktop {
+      display: none; } }
   @media (max-width: 991px) {
     .table-product-pricing .table-row-variation {
       display: flex;
