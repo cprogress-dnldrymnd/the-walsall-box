@@ -256,6 +256,9 @@ h6 {
                 &.td-pricing {
                     width: 100%;
                 }
+                &.product-ref, &.product-dimension {
+                    border-bottom: 1px solid #e3e3e3;
+                }
             }
 
 

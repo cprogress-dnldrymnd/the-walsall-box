@@ -153,11 +153,11 @@ function action_custom_pricing_table()
 				}
 				?>
 				<tr class="table-row-variation" id="variation-<?= $product_variation->get_id() ?>">
-					<td>
+					<td class="product-ref">
 						<div class="hide-desktop"><strong>PRODUCT REFERENCE</strong></div>
 						<div><?= get_the_title($product_variation->get_id()) ?></div>
 					</td>
-					<td>
+					<td lass="product-dimension">
 						<div class="hide-desktop"><strong>DIMENSIONS</strong></div>
 						<div><?= $product_variation->get_dimensions(); ?></div>
 					</td>
