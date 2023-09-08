@@ -154,11 +154,12 @@ function action_custom_pricing_table()
 				?>
 				<tr class="table-row-variation" id="variation-<?= $product_variation->get_id() ?>">
 					<td>
-						<?= get_the_title($product_variation->get_id()) ?>
+						<div class="hide-desktop">PRODUCT REFERENCE</div>
+						<div><?= get_the_title($product_variation->get_id()) ?></div>
 					</td>
 					<td>
-
-						<?= $product_variation->get_dimensions(); ?>
+						<div class="hide-desktop">DIMENSIONS</div>
+						<div><?= $product_variation->get_dimensions(); ?></div>
 					</td>
 					<td>
 						<table class="table-quantity-price">
@@ -173,20 +174,22 @@ function action_custom_pricing_table()
 										else {
 											echo '-';
 										}
-										?>
+										?> <span class="hide-desktop">PACK</span>
 									</td>
 								<?php } ?>
 							</tr>
 						</table>
 					</td>
 					<td>
-						<div class="qodef-quantity-buttons quantity">
-							<label class="screen-reader-text" for="quantity_64ee8192f3cb5">FEFCO 0201 – plain glued case quantity</label>
-							<span class="qodef-quantity-minus"></span>
-							<input type="text" id="quantity_64ee8192f3cb5" class="input-text variation-qty qty text qodef-quantity-input"
-								value="0" data-step="1" data-min="1" data-max="" name="quantity"
-								for="#variation-<?= $product_variation->get_id() ?>">
-							<span class="qodef-quantity-plus"></span>
+						<div>
+							<div class="qodef-quantity-buttons quantity">
+								<label class="screen-reader-text" for="quantity_64ee8192f3cb5">FEFCO 0201 – plain glued case quantity</label>
+								<span class="qodef-quantity-minus"></span>
+								<input type="text" id="quantity_64ee8192f3cb5" class="input-text variation-qty qty text qodef-quantity-input"
+									value="0" data-step="1" data-min="1" data-max="" name="quantity"
+									for="#variation-<?= $product_variation->get_id() ?>">
+								<span class="qodef-quantity-plus"></span>
+							</div>
 						</div>
 					</td>
 					<td>
