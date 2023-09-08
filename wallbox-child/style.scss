@@ -349,6 +349,12 @@ h6 {
             display: block;
             border: none !important;
             padding: 5px;
+            @media (max-width: 575px) {
+                padding: 0;
+            }
+        }
+        @media (max-width: 575px) {
+            flex-direction: column;
         }
     }
 }

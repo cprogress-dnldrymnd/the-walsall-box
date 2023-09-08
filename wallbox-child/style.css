@@ -243,6 +243,13 @@ h6 {
     display: block;
     border: none !important;
     padding: 5px; }
+    @media (max-width: 575px) {
+      .table-quantity-price tr td,
+      .table-quantity-price tr th {
+        padding: 0; } }
+  @media (max-width: 575px) {
+    .table-quantity-price tr {
+      flex-direction: column; } }
 
 .subpages .product-range-list {
   display: flex;
