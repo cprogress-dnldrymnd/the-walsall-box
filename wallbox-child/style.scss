@@ -90,7 +90,11 @@ h6 {
     font-weight: 500;
 }
 
-.single-product .qodef-woo-single-info-below-featured-image .qodef-single-product-summary .entry-summary .qodef-woo-product-title {
+.single-product
+    .qodef-woo-single-info-below-featured-image
+    .qodef-single-product-summary
+    .entry-summary
+    .qodef-woo-product-title {
     text-transform: uppercase;
 }
 
@@ -113,7 +117,6 @@ h6 {
 }
 
 #qodef-woo-page.qodef--single {
-
     .woocommerce-tabs,
     #yith-quick-view-content.single-product {
         .wc-tabs {
@@ -125,7 +128,7 @@ h6 {
             max-width: 100%;
             line-height: 1.3;
 
-            >* {
+            > * {
                 &:not(:last-child) {
                     margin-bottom: 2rem;
                 }
@@ -148,7 +151,7 @@ h6 {
 
 .woocommerce-product-details__short-description,
 .woocommerce-Tabs-panel {
-    >* {
+    > * {
         &:not(:last-child) {
             margin-bottom: 2rem;
         }
@@ -180,7 +183,11 @@ h6 {
     }
 }
 
-.single-product .qodef-woo-single-info-below-featured-image .qodef-single-product-summary .entry-summary .qodef-woo-product-title {
+.single-product
+    .qodef-woo-single-info-below-featured-image
+    .qodef-single-product-summary
+    .entry-summary
+    .qodef-woo-product-title {
     margin-top: 0 !important;
 }
 
@@ -195,7 +202,7 @@ h6 {
 }
 
 .button-group {
-    >a {
+    > a {
         &:not(:last-child) {
             margin-right: 2rem;
         }
@@ -206,7 +213,7 @@ h6 {
     display: flex;
     flex-direction: row-reverse;
 
-    >.woocommerce-product-gallery__image {
+    > .woocommerce-product-gallery__image {
         text-align: right;
         width: auto !important;
     }
@@ -236,42 +243,41 @@ h6 {
     margin-top: 3rem;
 
     .table-row-header {
-        @media(max-width: 991px) {
+        @media (max-width: 991px) {
             display: none;
         }
     }
 
     .table-row-variation {
         .hide-desktop {
-            @media(min-width: 992px) {
+            @media (min-width: 992px) {
                 display: none;
             }
         }
 
         td {
-            @media(max-width: 991px) {
+            @media (max-width: 991px) {
                 text-align: left;
                 border: none;
 
-                &.td-pricing {
+                &.td-pricing,
+                &.product-ref,
+                &.product-dimension {
                     width: 100%;
                 }
-                &.product-ref, &.product-dimension {
+                &.product-dimension {
                     border-bottom: 1px solid #e3e3e3;
                 }
             }
-
-
         }
 
-        @media(max-width: 991px) {
+        @media (max-width: 991px) {
             display: flex;
             flex-wrap: wrap;
         }
     }
 
     tr {
-
         th,
         td {
             text-align: center;
