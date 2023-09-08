@@ -175,11 +175,12 @@ h6 {
   @media (max-width: 991px) {
     .table-product-pricing .table-row-variation td {
       text-align: left; } }
+  .table-product-pricing .table-row-variation td.td-pricing {
+    width: 100%; }
   @media (max-width: 991px) {
     .table-product-pricing .table-row-variation {
       display: flex;
-      flex-wrap: wrap;
-      flex-direction: column; } }
+      flex-wrap: wrap; } }
   .table-product-pricing tr th,
   .table-product-pricing tr td {
     text-align: center;

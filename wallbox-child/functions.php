@@ -161,7 +161,7 @@ function action_custom_pricing_table()
 						<div class="hide-desktop"><strong>DIMENSIONS</strong></div>
 						<div><?= $product_variation->get_dimensions(); ?></div>
 					</td>
-					<td>
+					<td class="td-pricing">
 						<table class="table-quantity-price">
 							<tr>
 								<?php foreach ($min_quantity as $qty) { ?>

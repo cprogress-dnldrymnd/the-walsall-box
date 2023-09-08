@@ -252,12 +252,14 @@ h6 {
             @media(max-width: 991px) {
                 text-align: left;
             }
+            &.td-pricing{
+                width: 100%;
+            }
         }
 
         @media(max-width: 991px) {
             display: flex;
             flex-wrap: wrap;
-            flex-direction: column;
         }
     }
 
