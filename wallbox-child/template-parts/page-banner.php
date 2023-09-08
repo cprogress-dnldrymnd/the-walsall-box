@@ -1,6 +1,6 @@
 <?php
 $image_url = get_the_post_thumbnail_url();
-if (!is_front_page() && is_page() && !is_page_template()) {
+if (!is_front_page() && is_page() && !is_page_template() && !is_archive()) {
     ?>
 
 
