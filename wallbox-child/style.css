@@ -180,6 +180,9 @@ h6 {
   @media (min-width: 992px) {
     .table-product-pricing .table-row-variation .hide-desktop {
       display: none; } }
+  .table-product-pricing .table-row-variation td.product-ref {
+    color: #000;
+    font-weight: 500; }
   @media (max-width: 991px) {
     .table-product-pricing .table-row-variation td {
       text-align: left;

@@ -256,6 +256,10 @@ h6 {
         }
 
         td {
+            &.product-ref {
+                color: #000;
+                font-weight: 500;
+            }
             @media (max-width: 991px) {
                 text-align: left;
                 border: none;
@@ -275,7 +279,7 @@ h6 {
                     .total-price {
                         margin-right: 1rem;
                     }
-                    .add_to_cart_inline  {
+                    .add_to_cart_inline {
                         margin-top: 0;
                         margin-bottom: 0;
                     }
