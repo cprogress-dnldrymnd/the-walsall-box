@@ -205,7 +205,10 @@ h6 {
           margin-right: 1rem; }
         .table-product-pricing .table-row-variation td.td-add-to-cart .add_to_cart_inline {
           margin-top: 0;
-          margin-bottom: 0; } }
+          margin-bottom: 0;
+          flex-grow: 1; }
+          .table-product-pricing .table-row-variation td.td-add-to-cart .add_to_cart_inline a {
+            width: 100% !important; } }
       @media (max-width: 991px) and (max-width: 360px) {
         .table-product-pricing .table-row-variation td.td-add-to-cart .add_to_cart_inline a {
           padding-left: 20px !important;

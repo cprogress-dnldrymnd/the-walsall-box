@@ -289,6 +289,10 @@ h6 {
                     .add_to_cart_inline {
                         margin-top: 0;
                         margin-bottom: 0;
+                        flex-grow: 1;
+                        a {
+                            width: 100% !important;
+                        }
                         a {
                             @media (max-width: 360px) {
                                 padding-left: 20px !important;
