@@ -270,6 +270,11 @@ h6 {
                 }
                 &.td-add-to-cart {
                     display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    .total-price {
+                        margin-right: 1rem;
+                    }
                 }
             }
         }
@@ -277,10 +282,6 @@ h6 {
         @media (max-width: 991px) {
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
-            .total-price {
-                margin-right: 1rem;
-            }
         }
     }
 

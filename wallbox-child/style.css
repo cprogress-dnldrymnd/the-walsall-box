@@ -189,14 +189,15 @@ h6 {
       .table-product-pricing .table-row-variation td.product-dimension {
         border-bottom: 1px solid #e3e3e3; }
       .table-product-pricing .table-row-variation td.td-add-to-cart {
-        display: flex; } }
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center; }
+        .table-product-pricing .table-row-variation td.td-add-to-cart .total-price {
+          margin-right: 1rem; } }
   @media (max-width: 991px) {
     .table-product-pricing .table-row-variation {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center; }
-      .table-product-pricing .table-row-variation .total-price {
-        margin-right: 1rem; } }
+      flex-wrap: wrap; } }
   .table-product-pricing tr th,
   .table-product-pricing tr td {
     text-align: center;
