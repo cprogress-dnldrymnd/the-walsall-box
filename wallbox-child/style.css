@@ -200,7 +200,8 @@ h6 {
   @media (max-width: 991px) {
     .table-product-pricing .table-row-variation {
       display: flex;
-      flex-wrap: wrap; } }
+      flex-wrap: wrap;
+      padding: 1rem; } }
   .table-product-pricing tr th,
   .table-product-pricing tr td {
     text-align: center;
