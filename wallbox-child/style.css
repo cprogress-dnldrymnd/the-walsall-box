@@ -70,11 +70,7 @@ h6 {
   font-family: "Jost", sans-serif !important;
   font-weight: 500; }
 
-.single-product
-.qodef-woo-single-info-below-featured-image
-.qodef-single-product-summary
-.entry-summary
-.qodef-woo-product-title {
+.single-product .qodef-woo-single-info-below-featured-image .qodef-single-product-summary .entry-summary .qodef-woo-product-title {
   text-transform: uppercase; }
 
 @media only screen and (min-width: 1541px) {
@@ -134,11 +130,7 @@ h6 {
     .woocommerce-Tabs-panel ul li:not(:last-child) {
       margin-bottom: 0.5rem; }
 
-.single-product
-.qodef-woo-single-info-below-featured-image
-.qodef-single-product-summary
-.entry-summary
-.qodef-woo-product-title {
+.single-product .qodef-woo-single-info-below-featured-image .qodef-single-product-summary .entry-summary .qodef-woo-product-title {
   margin-top: 0 !important; }
 
 .button-link {
@@ -174,6 +166,13 @@ h6 {
 
 .table-product-pricing {
   margin-top: 3rem; }
+  @media (max-width: 991px) {
+    .table-product-pricing .table-row-header {
+      display: none; } }
+  @media (max-width: 991px) {
+    .table-product-pricing .table-row-variation {
+      display: flex;
+      flex-wrap: wrap; } }
   .table-product-pricing tr th,
   .table-product-pricing tr td {
     text-align: center;

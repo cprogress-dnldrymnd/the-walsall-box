@@ -120,7 +120,7 @@ function action_custom_pricing_table()
 			}
 		</style>
 		<table class="table-product-pricing">
-			<tr>
+			<tr class="table-row-header">
 				<th>PRODUCT REFERENCE</th>
 				<th>DIMENSIONS</th>
 				<th>
