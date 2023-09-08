@@ -242,6 +242,12 @@ h6 {
     }
 
     .table-row-variation {
+        .hide-desktop {
+            @media(min-width: 992px) {
+                display: none;
+            }
+        }
+
         @media(max-width: 991px) {
             display: flex;
             flex-wrap: wrap;
