@@ -207,7 +207,7 @@ h6 {
           margin-top: 0;
           margin-bottom: 0; } }
       @media (max-width: 991px) and (max-width: 360px) {
-        .table-product-pricing .table-row-variation td.td-add-to-cart .add_to_cart_inline {
+        .table-product-pricing .table-row-variation td.td-add-to-cart .add_to_cart_inline a {
           padding-left: 20px !important;
           padding-right: 20px !important; } }
 
