@@ -348,3 +348,12 @@ function bbloomer_variation_price_format_min($price, $product)
 
 	return '';
 }
+
+function wp1482371_custom_post_type_args( $args, $post_type ) {
+    if ( $post_type == "team" ) {
+        $args['publicly_queryable'] = false;
+    }
+
+    return $args;
+}
+add_filter( 'register_post_type_args', 'wp1482371_custom_post_type_args', 20, 2 );
