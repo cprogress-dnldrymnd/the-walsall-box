@@ -167,7 +167,7 @@ function action_custom_pricing_table()
 								<?php foreach ($min_quantity as $qty) { ?>
 									<?php $price = number_format((float) $price_arr[$qty], 2, '.', ''); ?>
 									<td data-qty="<?= $qty ?>" data-price="<?= $price ?>">
-										<span class="hide-desktop"><?= $qty ?> PACK </span>
+										<span class="hide-desktop"><strong><?= $qty ?> PACK:</strong> </span>
 										<?php
 										if ($price_arr[$qty]) {
 											echo '£' . $price;
