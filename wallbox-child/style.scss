@@ -70,8 +70,19 @@ body {
     }
 }
 
-#qodef-page-header .qodef-header-logo-link {
-    height: 55px !important;
+#qodef-page-header {
+    .qodef-header-logo-link {
+        height: 55px !important;
+    }
+    .qodef-header-navigation {
+        .menu {
+            .menu-item {
+                @media(max-width: 1300px) {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
 }
 
 h1,
