@@ -20,8 +20,8 @@ add_filter('ngettext', 'change_valiance_text');
 
 function change_valiance_text($translated)
 {
-	$translated = str_replace('Esmee', 'Walsall Box', $translated);
-	$translated = str_replace('esmee', 'Walsall Box', $translated);
+	$translated = str_replace('Esmee', 'Wallbox', $translated);
+	$translated = str_replace('esmee', 'wallbox', $translated);
 	return $translated;
 }
 
@@ -43,10 +43,9 @@ remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add
 
 function action_woocommerce_after_add_to_cart_form()
 {
-	?>
+?>
 	<div class="button-group">
-		<a class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link" href="#tab-enquire_tab"
-			target="_self">
+		<a class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link" href="#tab-enquire_tab" target="_self">
 			<span class="qodef-m-text">GET A QUOTE</span>
 		</a>
 
@@ -112,7 +111,7 @@ function action_custom_pricing_table()
 		}
 		$min_quantity = array_unique($min_quantity);
 		asort($min_quantity);
-		?>
+	?>
 		<style>
 			.variations,
 			.single_variation_wrap {
@@ -127,7 +126,7 @@ function action_custom_pricing_table()
 					MINUMUM NUMBER OF PACKS
 					<table class="table-quantity-price table-quantity">
 						<tr>
-							<?php foreach ($min_quantity as $qty) { ?>
+							<?php foreach ($min_quantity as $qty) {  ?>
 								<td class="min-quantity" data-qty="<?= $qty ?>">
 									<?= $qty ?>
 								</td>
@@ -163,14 +162,13 @@ function action_custom_pricing_table()
 					<td>
 						<table class="table-quantity-price">
 							<tr>
-								<?php foreach ($min_quantity as $qty) { ?>
-									<?php $price = number_format((float) $price_arr[$qty], 2, '.', ''); ?>
+								<?php foreach ($min_quantity as $qty) {  ?>
+									<?php $price = number_format((float)$price_arr[$qty], 2, '.', ''); ?>
 									<td data-qty="<?= $qty ?>" data-price="<?= $price ?>">
 										<?php
 										if ($price_arr[$qty]) {
 											echo '£' . $price;
-										}
-										else {
+										} else {
 											echo '-';
 										}
 										?>
@@ -183,9 +181,7 @@ function action_custom_pricing_table()
 						<div class="qodef-quantity-buttons quantity">
 							<label class="screen-reader-text" for="quantity_64ee8192f3cb5">FEFCO 0201 – plain glued case quantity</label>
 							<span class="qodef-quantity-minus"></span>
-							<input type="text" id="quantity_64ee8192f3cb5" class="input-text variation-qty qty text qodef-quantity-input"
-								value="0" data-step="1" data-min="1" data-max="" name="quantity"
-								for="#variation-<?= $product_variation->get_id() ?>">
+							<input type="text" id="quantity_64ee8192f3cb5" class="input-text variation-qty qty text qodef-quantity-input" value="0" data-step="1" data-min="1" data-max="" name="quantity" for="#variation-<?= $product_variation->get_id() ?>">
 							<span class="qodef-quantity-plus"></span>
 						</div>
 					</td>
@@ -197,7 +193,7 @@ function action_custom_pricing_table()
 			<?php } ?>
 		</table>
 		<?php
-	?>
+		?>
 	<?php
 	}
 }
@@ -210,18 +206,18 @@ function action_wp_footer()
 	<script>
 		console.log(get_closes([1, 5, 10, 20], 19));
 
-		var theArray = jQuery('.min-quantity').map(function () {
+		var theArray = jQuery('.min-quantity').map(function() {
 			return parseInt(jQuery.trim(jQuery(this).text()));
 		}).get();
 
 
-		jQuery(".variation-qty").on("change", function () {
+		jQuery(".variation-qty").on("change", function() {
 			$val = jQuery(this).val();
 			$row_id = jQuery(this).attr('for');
 			get_total($val, $row_id);
 		});
 
-		jQuery(".variation-qty").on("keyup", function () {
+		jQuery(".variation-qty").on("keyup", function() {
 			$val = jQuery(this).val();
 			$row_id = jQuery(this).attr('for');
 			get_total($val, $row_id);
@@ -254,7 +250,7 @@ function action_wp_footer()
 			var theArray;
 			var goal;
 			var closest = null;
-			jQuery.each(theArray, function () {
+			jQuery.each(theArray, function() {
 				if (closest == null || Math.abs(this - goal) < Math.abs(closest - goal)) {
 					if (Math.abs(goal) >= Math.abs(this)) {
 						closest = Math.abs(this);
@@ -264,7 +260,7 @@ function action_wp_footer()
 			return closest;
 		}
 	</script>
-	<?php
+<?php
 }
 
 add_action('wp_footer', 'action_wp_footer');
@@ -285,7 +281,7 @@ function subpages()
 {
 	ob_start();
 	$childPages = get_pages(array('child_of' => get_the_ID(), 'parent' => get_the_ID(), 'sort_column' => 'menu_order'));
-	?>
+?>
 	<div class="subpages">
 		<?php if ($childPages) { ?>
 			<h3>Click on the boxes below for further details:</h3>
@@ -293,7 +289,7 @@ function subpages()
 		<div class='product-range-list page-menu'>
 			<?php $i = 0; ?>
 
-			<?php foreach ($childPages as $childPage): ?>
+			<?php foreach ($childPages as $childPage) : ?>
 				<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($childPage->ID), 'medium'); ?>
 
 				<div class="product-range-list-item product-range-list-item-<?php echo $i; ?>">
@@ -305,9 +301,7 @@ function subpages()
 							<div class="heading-box">
 								<h3><?php echo $childPage->post_title; ?></h3>
 							</div>
-							<span class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link"
-								href="https://thewalsallbox.theprogressteam.co.uk/2015/10/09/new-address/" target="_self"> <span
-									class="qodef-m-text">Read More</span></span>
+							<span class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link" href="https://thewalsallbox.theprogressteam.co.uk/2015/10/09/new-address/" target="_self"> <span class="qodef-m-text">Read More</span></span>
 						</div>
 					</a>
 				</div>
@@ -318,7 +312,7 @@ function subpages()
 
 		</div>
 	</div>
-	<?php
+<?php
 	return ob_get_clean();
 }
 
@@ -332,16 +326,15 @@ add_shortcode('subpages', 'subpages');
  * @compatible    WooCommerce 6
  * @donate $9     https://businessbloomer.com/bloomer-armada/
  */
-
-add_filter('woocommerce_variable_price_html', 'bbloomer_variation_price_format_min', 9999, 2);
-
-function bbloomer_variation_price_format_min($price, $product)
-{
-	$prices = $product->get_variation_prices(true);
-	$min_price = current($prices['price']);
-	$max_price = end($prices['price']);
-	$min_reg_price = current($prices['regular_price']);
-	$max_reg_price = end($prices['regular_price']);
-
+ 
+ add_filter( 'woocommerce_variable_price_html', 'bbloomer_variation_price_format_min', 9999, 2 );
+ 
+ function bbloomer_variation_price_format_min( $price, $product ) {
+	$prices = $product->get_variation_prices( true );
+	$min_price = current( $prices['price'] );
+	$max_price = end( $prices['price'] );
+	$min_reg_price = current( $prices['regular_price'] );
+	$max_reg_price = end( $prices['regular_price'] );
+	
 	return '';
-}
+ }
