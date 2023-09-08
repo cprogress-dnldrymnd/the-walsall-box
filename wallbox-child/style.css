@@ -193,7 +193,10 @@ h6 {
         flex-wrap: wrap;
         align-items: center; }
         .table-product-pricing .table-row-variation td.td-add-to-cart .total-price {
-          margin-right: 1rem; } }
+          margin-right: 1rem; }
+        .table-product-pricing .table-row-variation td.td-add-to-cart .add_to_cart_inline {
+          margin-top: 0;
+          margin-bottom: 0; } }
   @media (max-width: 991px) {
     .table-product-pricing .table-row-variation {
       display: flex;
