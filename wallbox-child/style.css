@@ -54,11 +54,12 @@ body {
     line-height: 1; }
 
 #qodef-page-header .qodef-header-logo-link {
-  height: 55px !important; }
+  height: 55px !important;
+  padding-right: 0 !important; }
 @media (max-width: 1300px) {
   #qodef-page-header .qodef-header-navigation .menu .menu-item {
-    margin-right: 15px;
-    margin-left: 15px; } }
+    margin-right: 1vw;
+    margin-left: 1vw; } }
 
 h1,
 h2,
