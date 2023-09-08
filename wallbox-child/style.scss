@@ -251,10 +251,14 @@ h6 {
         td {
             @media(max-width: 991px) {
                 text-align: left;
+                border: none;
+
+                &.td-pricing {
+                    width: 100%;
+                }
             }
-            &.td-pricing{
-                width: 100%;
-            }
+
+
         }
 
         @media(max-width: 991px) {
