@@ -157,7 +157,7 @@ function action_custom_pricing_table()
 						<div><?= get_the_title($product_variation->get_id()) ?></div>
 					</td>
 					<td class="product-dimension">
-						<div class="hide-desktop"><strong>DIMENSIONS</strong></div>
+						<div class="hide-desktop"><strong>DIMENSIONS: </strong></div>
 						<div><?= $product_variation->get_dimensions(); ?></div>
 					</td>
 					<td class="td-pricing">

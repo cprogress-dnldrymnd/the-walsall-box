@@ -267,7 +267,10 @@ h6 {
             @media (max-width: 991px) {
                 text-align: left;
                 border: none;
-
+                &.product-dimension {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
                 &.td-pricing,
                 &.product-ref,
                 &.product-dimension {
@@ -295,6 +298,7 @@ h6 {
             display: flex;
             flex-wrap: wrap;
             padding: 1rem;
+            margin-bottom: 1rem;
         }
     }
 

@@ -190,6 +190,9 @@ h6 {
     .table-product-pricing .table-row-variation td {
       text-align: left;
       border: none; }
+      .table-product-pricing .table-row-variation td.product-dimension {
+        display: flex;
+        flex-wrap: wrap; }
       .table-product-pricing .table-row-variation td.td-pricing, .table-product-pricing .table-row-variation td.product-ref, .table-product-pricing .table-row-variation td.product-dimension {
         width: 100%; }
       .table-product-pricing .table-row-variation td.product-dimension {
@@ -207,7 +210,8 @@ h6 {
     .table-product-pricing .table-row-variation {
       display: flex;
       flex-wrap: wrap;
-      padding: 1rem; } }
+      padding: 1rem;
+      margin-bottom: 1rem; } }
   .table-product-pricing tr th,
   .table-product-pricing tr td {
     text-align: center;
