@@ -351,7 +351,7 @@ function bbloomer_variation_price_format_min($price, $product)
 
 function wp1482371_custom_post_type_args( $args, $post_type ) {
     if ( $post_type == "team" ) {
-        $args['publicly_queryable'] = false;
+        $args['publicly_queryable'] = true;
     }
 
     return $args;
