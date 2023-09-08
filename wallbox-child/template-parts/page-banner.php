@@ -1,5 +1,7 @@
 <?php
 $image_url = get_the_post_thumbnail_url();
+
+echo get_page_template_slug();
 ?>
 
 
