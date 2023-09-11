@@ -151,6 +151,7 @@ h6 {
 }
 
 .qodef-page-title.qodef-page-title {
+    height: auto;
     .qodef-breadcrumbs {
         text-align: left;
         a,
@@ -163,12 +164,12 @@ h6 {
                 display: none;
             }
         }
-    }
-    @media(min-width: 768px) {
-        height: 100px;
-    }
-    @media(max-width: 767px) {
-        height: 50px;
+        @media (min-width: 768px) {
+            height: 100px;
+        }
+        @media (max-width: 767px) {
+            height: 50px;
+        }
     }
 }
 
