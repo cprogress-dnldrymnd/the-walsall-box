@@ -110,7 +110,10 @@ h6 {
 .qodef-page-title.qodef-page-title.qodef-title--breadcrumbs {
   height: auto; }
 .qodef-page-title.qodef-page-title .qodef-breadcrumbs {
-  text-align: left; }
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
   .qodef-page-title.qodef-page-title .qodef-breadcrumbs a,
   .qodef-page-title.qodef-page-title .qodef-breadcrumbs span {
     font-size: 16px;
