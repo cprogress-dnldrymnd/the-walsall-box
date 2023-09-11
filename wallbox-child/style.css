@@ -107,23 +107,23 @@ h6 {
   #qodef-woo-page.qodef--single #yith-quick-view-content.single-product .wc-tab > *:not(:last-child) {
     margin-bottom: 2rem; }
 
-.qodef-page-title.qodef-page-title {
+.qodef-page-title.qodef-page-title.qodef-title--breadcrumbs {
   height: auto; }
-  .qodef-page-title.qodef-page-title .qodef-breadcrumbs {
-    text-align: left; }
-    .qodef-page-title.qodef-page-title .qodef-breadcrumbs a,
-    .qodef-page-title.qodef-page-title .qodef-breadcrumbs span {
-      font-size: 16px;
-      font-weight: 500; }
-    @media (max-width: 575px) {
-      .qodef-page-title.qodef-page-title .qodef-breadcrumbs .qodef-breadcrumbs-current {
-        display: none; } }
-    @media (min-width: 768px) {
-      .qodef-page-title.qodef-page-title .qodef-breadcrumbs {
-        height: 100px; } }
-    @media (max-width: 767px) {
-      .qodef-page-title.qodef-page-title .qodef-breadcrumbs {
-        height: 50px; } }
+.qodef-page-title.qodef-page-title .qodef-breadcrumbs {
+  text-align: left; }
+  .qodef-page-title.qodef-page-title .qodef-breadcrumbs a,
+  .qodef-page-title.qodef-page-title .qodef-breadcrumbs span {
+    font-size: 16px;
+    font-weight: 500; }
+  @media (max-width: 575px) {
+    .qodef-page-title.qodef-page-title .qodef-breadcrumbs .qodef-breadcrumbs-current {
+      display: none; } }
+  @media (min-width: 768px) {
+    .qodef-page-title.qodef-page-title .qodef-breadcrumbs {
+      height: 100px; } }
+  @media (max-width: 767px) {
+    .qodef-page-title.qodef-page-title .qodef-breadcrumbs {
+      height: 50px; } }
 
 .woocommerce-product-details__short-description > *:not(:last-child),
 .woocommerce-Tabs-panel > *:not(:last-child) {
