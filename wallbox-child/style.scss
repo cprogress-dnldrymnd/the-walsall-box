@@ -12,6 +12,8 @@ Template: wallbox
 
 body {
     color: #888888;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .qodef-blog.qodef--list .entry-date,
