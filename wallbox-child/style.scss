@@ -156,6 +156,9 @@ h6 {
     }
     .qodef-breadcrumbs {
         text-align: left;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
         a,
         span {
             font-size: 16px;
