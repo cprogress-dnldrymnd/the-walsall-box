@@ -151,7 +151,9 @@ h6 {
 }
 
 .qodef-page-title.qodef-page-title {
-    height: auto;
+    &.qodef-title--breadcrumbs {
+        height: auto;
+    }
     .qodef-breadcrumbs {
         text-align: left;
         a,
