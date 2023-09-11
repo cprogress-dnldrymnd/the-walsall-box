@@ -311,7 +311,7 @@ section.page-banner {
     position: relative;
     z-index: 1;
     color: #fff; }
-  section.page-banner:before {
+  section.page-banner.with-background:before {
     content: "";
     position: absolute;
     left: 0;
@@ -319,6 +319,8 @@ section.page-banner {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); }
+  section.page-banner.no-background {
+    background-color: #092f87; }
 
 #product-tabs {
   margin-top: 0 !important;
