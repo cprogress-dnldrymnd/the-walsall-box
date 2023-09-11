@@ -320,6 +320,9 @@ h6 {
         transition: 400ms;
         margin-top: 20px;
         margin-bottom: 20px; }
+        @media (max-width: 767px) {
+          .subpages .product-range-list .product-range-list-item .image-box img {
+            height: calc(100% - 20px); } }
     .subpages .product-range-list .product-range-list-item .outer {
       display: block;
       height: 100%; }
