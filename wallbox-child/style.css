@@ -113,6 +113,15 @@ h6 {
   .qodef-page-title .qodef-breadcrumbs span {
     font-size: 16px;
     font-weight: 500; }
+  @media (max-width: 575px) {
+    .qodef-page-title .qodef-breadcrumbs .qodef-breadcrumbs-current {
+      display: none; } }
+@media (min-width: 768px) {
+  .qodef-page-title {
+    height: 100px; } }
+@media (max-width: 767px) {
+  .qodef-page-title {
+    height: 50px; } }
 
 .woocommerce-product-details__short-description > *:not(:last-child),
 .woocommerce-Tabs-panel > *:not(:last-child) {
@@ -338,9 +347,5 @@ section.page-banner {
 .widget_esmee_core_woo_dropdown_cart .qodef-m-svg-icon,
 .widget_shopping_cart .qodef-m-svg-icon {
   margin-top: 0; }
-
-@media (max-width: 575px) {
-  .qodef-breadcrumbs .qodef-breadcrumbs-current {
-    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
