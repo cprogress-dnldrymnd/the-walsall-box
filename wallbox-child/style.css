@@ -10,7 +10,9 @@ Template: wallbox
 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 body {
-  color: #888888; }
+  color: #888888;
+  overflow-x: hidden;
+  position: relative; }
 
 .qodef-blog.qodef--list .entry-date,
 .qodef-blog.qodef--single .entry-date,
