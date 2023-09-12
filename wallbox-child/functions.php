@@ -367,7 +367,6 @@ function custom_template($atts)
 			$atts
 		)
 	);
-	$contentElementor = "";
 
 	if (class_exists("\\Elementor\\Plugin")) {
 		$pluginElementor = \Elementor\Plugin::instance();
