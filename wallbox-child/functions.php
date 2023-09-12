@@ -43,10 +43,9 @@ remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add
 
 function action_woocommerce_after_add_to_cart_form()
 {
-	?>
+?>
 	<div class="button-group">
-		<a class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link" href="#tab-enquire_tab"
-			target="_self">
+		<a class="qodef-shortcode qodef-m  qodef-button qodef-layout--filled  qodef-html--link" href="#tab-enquire_tab" target="_self">
 			<span class="qodef-m-text">GET A QUOTE</span>
 		</a>
 
@@ -112,7 +111,7 @@ function action_custom_pricing_table()
 		}
 		$min_quantity = array_unique($min_quantity);
 		asort($min_quantity);
-		?>
+	?>
 		<style>
 			.variations,
 			.single_variation_wrap {
@@ -170,8 +169,7 @@ function action_custom_pricing_table()
 										<?php
 										if ($price_arr[$qty]) {
 											echo '£' . $price;
-										}
-										else {
+										} else {
 											echo '-';
 										}
 										?>
@@ -185,9 +183,7 @@ function action_custom_pricing_table()
 							<div class="qodef-quantity-buttons quantity">
 								<label class="screen-reader-text" for="quantity_64ee8192f3cb5">FEFCO 0201 – plain glued case quantity</label>
 								<span class="qodef-quantity-minus"></span>
-								<input type="text" id="quantity_64ee8192f3cb5" class="input-text variation-qty qty text qodef-quantity-input"
-									value="0" data-step="1" data-min="1" data-max="" name="quantity"
-									for="#variation-<?= $product_variation->get_id() ?>">
+								<input type="text" id="quantity_64ee8192f3cb5" class="input-text variation-qty qty text qodef-quantity-input" value="0" data-step="1" data-min="1" data-max="" name="quantity" for="#variation-<?= $product_variation->get_id() ?>">
 								<span class="qodef-quantity-plus"></span>
 							</div>
 						</div>
@@ -200,7 +196,7 @@ function action_custom_pricing_table()
 			<?php } ?>
 		</table>
 		<?php
-	?>
+		?>
 	<?php
 	}
 }
@@ -213,18 +209,18 @@ function action_wp_footer()
 	<script>
 		console.log(get_closes([1, 5, 10, 20], 19));
 
-		var theArray = jQuery('.min-quantity').map(function () {
+		var theArray = jQuery('.min-quantity').map(function() {
 			return parseInt(jQuery.trim(jQuery(this).text()));
 		}).get();
 
 
-		jQuery(".variation-qty").on("change", function () {
+		jQuery(".variation-qty").on("change", function() {
 			$val = jQuery(this).val();
 			$row_id = jQuery(this).attr('for');
 			get_total($val, $row_id);
 		});
 
-		jQuery(".variation-qty").on("keyup", function () {
+		jQuery(".variation-qty").on("keyup", function() {
 			$val = jQuery(this).val();
 			$row_id = jQuery(this).attr('for');
 			get_total($val, $row_id);
@@ -257,7 +253,7 @@ function action_wp_footer()
 			var theArray;
 			var goal;
 			var closest = null;
-			jQuery.each(theArray, function () {
+			jQuery.each(theArray, function() {
 				if (closest == null || Math.abs(this - goal) < Math.abs(closest - goal)) {
 					if (Math.abs(goal) >= Math.abs(this)) {
 						closest = Math.abs(this);
@@ -267,7 +263,7 @@ function action_wp_footer()
 			return closest;
 		}
 	</script>
-	<?php
+<?php
 }
 
 add_action('wp_footer', 'action_wp_footer');
@@ -288,7 +284,7 @@ function subpages()
 {
 	ob_start();
 	$childPages = get_pages(array('child_of' => get_the_ID(), 'parent' => get_the_ID(), 'sort_column' => 'menu_order'));
-	?>
+?>
 	<div class="subpages">
 		<?php if ($childPages) { ?>
 			<h3>Click on the boxes below for further details:</h3>
@@ -296,7 +292,7 @@ function subpages()
 		<div class='product-range-list page-menu'>
 			<?php $i = 0; ?>
 
-			<?php foreach ($childPages as $childPage): ?>
+			<?php foreach ($childPages as $childPage) : ?>
 				<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($childPage->ID), 'medium'); ?>
 
 				<div class="product-range-list-item product-range-list-item-<?php echo $i; ?>">
@@ -308,9 +304,7 @@ function subpages()
 							<div class="heading-box">
 								<h3><?php echo $childPage->post_title; ?></h3>
 							</div>
-							<span class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link"
-								href="https://thewalsallbox.theprogressteam.co.uk/2015/10/09/new-address/" target="_self"> <span
-									class="qodef-m-text">Read More</span></span>
+							<span class="qodef-shortcode qodef-m  qodef-button qodef-layout--textual  qodef-html--link" href="https://thewalsallbox.theprogressteam.co.uk/2015/10/09/new-address/" target="_self"> <span class="qodef-m-text">Read More</span></span>
 						</div>
 					</a>
 				</div>
@@ -321,7 +315,7 @@ function subpages()
 
 		</div>
 	</div>
-	<?php
+<?php
 	return ob_get_clean();
 }
 
@@ -349,15 +343,39 @@ function bbloomer_variation_price_format_min($price, $product)
 	return '';
 }
 
-function wp1482371_custom_post_type_args( $args, $post_type ) {
-    if ( $post_type == "team" ) {
-        $args['publicly_queryable'] = true;
-        $args['public'] = true;
-        $args['show_in_menu'] = true;
-        $args['show_in_admin_bar'] = true;
-        $args['exclude_from_search'] = false;
-    }
+function wp1482371_custom_post_type_args($args, $post_type)
+{
+	if ($post_type == "team") {
+		$args['publicly_queryable'] = true;
+		$args['public'] = true;
+		$args['show_in_menu'] = true;
+		$args['show_in_admin_bar'] = true;
+		$args['exclude_from_search'] = false;
+	}
 
-    return $args;
+	return $args;
 }
-add_filter( 'register_post_type_args', 'wp1482371_custom_post_type_args', 20, 2 );
+add_filter('register_post_type_args', 'wp1482371_custom_post_type_args', 20, 2);
+
+function custom_template($atts)
+{
+	extract(
+		shortcode_atts(
+			array(
+				'post_id' => '',
+			),
+			$atts
+		)
+	);
+	$contentElementor = "";
+
+	if (class_exists("\\Elementor\\Plugin")) {
+		$pluginElementor = \Elementor\Plugin::instance();
+		$contentElementor = $pluginElementor->frontend->get_builder_content($post_id);
+	}
+
+	return $contentElementor;
+}
+
+
+add_shortcode('custom_template', 'custom_template');
