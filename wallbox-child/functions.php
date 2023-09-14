@@ -209,6 +209,7 @@ function action_wp_footer()
 	<script>
 		jQuery(document).ready(function() {
 			jQuery('a[href="#tab-enquire_tab"]').click(function(e) {
+				jQuery('.wc-tabs li').removeClass('active');
 				jQuery('#tab-title-enquire_tab').addClass('active');
 				jQuery('.woocommerce-Tabs-panel').css('display', 'none');
 				jQuery('#tab-enquire_tab').css('display', 'block');
