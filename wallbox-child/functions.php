@@ -210,7 +210,6 @@ function action_wp_footer()
 		jQuery(document).ready(function() {
 			jQuery('a[href="#tab-enquire_tab"]').click(function(e) {
 				jQuery('#tab-title-enquire_tab').click();
-				e.preventDefault();
 			});
 		});
 
