@@ -207,7 +207,12 @@ function action_wp_footer()
 {
 	?>
 	<script>
-		console.log(get_closes([1, 5, 10, 20], 19));
+		jQuery(document).ready(function() {
+			jQuery('a[href="#tab-enquire_tab"]').click(function(e) {
+				jQuery('#tab-title-enquire_tab').click();
+				e.preventDefault();
+			});
+		});
 
 		var theArray = jQuery('.min-quantity').map(function() {
 			return parseInt(jQuery.trim(jQuery(this).text()));
