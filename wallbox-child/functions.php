@@ -214,7 +214,7 @@ function action_wp_footer()
 				jQuery('.woocommerce-Tabs-panel').css('display', 'none');
 				jQuery('#tab-enquire_tab').css('display', 'block');
 				jQuery('html, body').animate({
-                    scrollTop: jQuery("#product-tabs").offset().top
+                    scrollTop: jQuery("#product-tabs").offset().top + 100
                 }, 2000);
 				e.preventDefault();
 			});
