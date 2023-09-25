@@ -404,13 +404,13 @@ section.page-banner {
 
   .qodef-content-grid.qodef-content-grid {
     width: 90%; } }
-.qodef-woo-product-list ul.products .product .image-box {
+.qodef-woo-product-list ul.products .product .qodef-woo-product-image {
   position: relative;
   padding: 40%;
   position: relative;
   overflow: hidden;
   background-color: #e3e3e3; }
-  .qodef-woo-product-list ul.products .product .image-box img {
+  .qodef-woo-product-list ul.products .product .qodef-woo-product-image img {
     position: absolute;
     left: 0;
     top: 0;
@@ -421,7 +421,7 @@ section.page-banner {
     margin-top: 20px;
     margin-bottom: 20px; }
     @media (max-width: 767px) {
-      .qodef-woo-product-list ul.products .product .image-box img {
+      .qodef-woo-product-list ul.products .product .qodef-woo-product-image img {
         height: calc(100% - 20px);
         margin-top: 10px;
         margin-bottom: 10px; } }
