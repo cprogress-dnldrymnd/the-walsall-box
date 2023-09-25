@@ -1,11 +1,12 @@
 <?php
-$image_url = get_the_post_thumbnail_url();
 if (!is_front_page() && is_page() && !is_page_template() || is_shop()) {
 
-    if(is_shop()) {
+    if (is_shop()) {
         $title = 'SHOP';
+        $image_url = wp_get_attachment_image_url(6397, 'large');
     } else {
         $title = get_the_title();
+        $image_url = get_the_post_thumbnail_url();
     }
 ?>
 
