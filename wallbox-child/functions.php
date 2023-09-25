@@ -389,3 +389,22 @@ function custom_template($atts)
 
 
 add_shortcode('custom_template', 'custom_template');
+
+
+
+
+function action_head() { 
+	if(get_current_user_id() != 1) {
+	?>
+		<style>
+			#toplevel_page_esmee_core_menu, #toplevel_page_esmee_core_dashboard, #wp-admin-bar-esmee-core-menu-admin-bar-options {
+				display: none !important;
+			}
+		</style>
+	<?php
+	}
+}
+
+add_action('admin_head', 'action_head');
+
+add_action('wp_head', 'action_head');
