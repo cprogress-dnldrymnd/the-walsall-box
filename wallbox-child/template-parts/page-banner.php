@@ -1,5 +1,5 @@
 <?php
-if (!is_front_page() && is_page() && !is_page_template() || is_shop()) {
+if (!is_front_page() && is_page() && is_page_template() || is_shop()) {
 
     if (is_shop()) {
         $title = 'SHOP';
